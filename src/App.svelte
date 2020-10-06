@@ -56,11 +56,11 @@
 	</div>
 {#if dateChosen}
 <div class='text-center'>
-  <label>Week Commencing:{weekDates[0].format('DD/MM/YYYY')} <input type="number" /></label>
+  <label>Week Commencing:{weekDates[0].format('DD/MM/YYYY')} <input type="number" class="field-input hours w-input"/></label>
 </div >
   {#each Array(weeks) as week, index}
   <div class='text-center'>
-    <label>Week Commencing:{weekDates[index+1].format('DD/MM/YYYY')} <input type="number" /></label>
+    <label>Week Commencing:{weekDates[index+1].format('DD/MM/YYYY')} <input type="number" class="field-input hours w-input"/></label>
   </div>
   {/each}
   <input type="button" on:click={() => weeks++} value="Add Week" />
