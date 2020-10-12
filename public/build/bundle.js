@@ -4211,12 +4211,12 @@ var app = (function () {
 
     function get_each_context$4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[23] = list[i];
-    	child_ctx[25] = i;
+    	child_ctx[24] = list[i];
+    	child_ctx[26] = i;
     	return child_ctx;
     }
 
-    // (121:12) {#if dateChosen}
+    // (125:12) {#if dateChosen}
     function create_if_block_5(ctx) {
     	let div0;
     	let t1;
@@ -4232,9 +4232,9 @@ var app = (function () {
     			div1 = element("div");
     			t2 = text(t2_value);
     			attr_dev(div0, "class", "week-info-text");
-    			add_location(div0, file$6, 121, 14, 3570);
+    			add_location(div0, file$6, 125, 14, 3825);
     			attr_dev(div1, "class", "week-info-text");
-    			add_location(div1, file$6, 122, 14, 3634);
+    			add_location(div1, file$6, 126, 14, 3889);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -4256,14 +4256,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(121:12) {#if dateChosen}",
+    		source: "(125:12) {#if dateChosen}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (199:10) {#if includeWeekends}
+    // (203:10) {#if includeWeekends}
     function create_if_block_4(ctx) {
     	let div4;
     	let div1;
@@ -4287,7 +4287,7 @@ var app = (function () {
     			div2.textContent = "SUN";
     			input1 = element("input");
     			attr_dev(div0, "class", "day-label");
-    			add_location(div0, file$6, 201, 16, 6036);
+    			add_location(div0, file$6, 205, 16, 6291);
     			attr_dev(input0, "type", "number");
     			attr_dev(input0, "min", "0");
     			attr_dev(input0, "max", "16");
@@ -4299,11 +4299,11 @@ var app = (function () {
     			input0.value = "0";
     			input0.required = true;
     			attr_dev(input0, "id", "sat");
-    			add_location(input0, file$6, 201, 48, 6068);
+    			add_location(input0, file$6, 205, 48, 6323);
     			attr_dev(div1, "class", "day-wrap");
-    			add_location(div1, file$6, 200, 14, 5997);
+    			add_location(div1, file$6, 204, 14, 6252);
     			attr_dev(div2, "class", "day-label");
-    			add_location(div2, file$6, 215, 16, 6520);
+    			add_location(div2, file$6, 219, 16, 6775);
     			attr_dev(input1, "type", "number");
     			attr_dev(input1, "min", "0");
     			attr_dev(input1, "max", "16");
@@ -4315,11 +4315,11 @@ var app = (function () {
     			input1.value = "0";
     			input1.required = true;
     			attr_dev(input1, "id", "sun");
-    			add_location(input1, file$6, 215, 48, 6552);
+    			add_location(input1, file$6, 219, 48, 6807);
     			attr_dev(div3, "class", "day-wrap");
-    			add_location(div3, file$6, 214, 14, 6481);
+    			add_location(div3, file$6, 218, 14, 6736);
     			attr_dev(div4, "class", "weekend-wrap");
-    			add_location(div4, file$6, 199, 12, 5956);
+    			add_location(div4, file$6, 203, 12, 6211);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div4, anchor);
@@ -4340,14 +4340,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(199:10) {#if includeWeekends}",
+    		source: "(203:10) {#if includeWeekends}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (231:10) {#if dateChosen && weeks == 0}
+    // (235:10) {#if dateChosen && weeks == 0}
     function create_if_block_3(ctx) {
     	let div;
     	let input;
@@ -4361,9 +4361,9 @@ var app = (function () {
     			attr_dev(input, "type", "button");
     			attr_dev(input, "class", "add-remove-button w-button svelte-eq46ml");
     			input.value = "+";
-    			add_location(input, file$6, 232, 14, 7084);
+    			add_location(input, file$6, 236, 14, 7339);
     			attr_dev(div, "class", "week-button-wrap");
-    			add_location(div, file$6, 231, 12, 7039);
+    			add_location(div, file$6, 235, 12, 7294);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4386,14 +4386,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(231:10) {#if dateChosen && weeks == 0}",
+    		source: "(235:10) {#if dateChosen && weeks == 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (299:12) {#if includeWeekends}
+    // (303:12) {#if includeWeekends}
     function create_if_block_2(ctx) {
     	let div4;
     	let div1;
@@ -4421,31 +4421,31 @@ var app = (function () {
     			div2.textContent = "SUN";
     			input1 = element("input");
     			attr_dev(div0, "class", "day-label");
-    			add_location(div0, file$6, 301, 18, 9632);
+    			add_location(div0, file$6, 305, 18, 9887);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "field-input time-unit w-input svelte-eq46ml");
     			attr_dev(input0, "maxlength", "256");
-    			attr_dev(input0, "name", input0_name_value = "sat week " + (/*index*/ ctx[25] + 2));
-    			attr_dev(input0, "data-name", input0_data_name_value = "sat week " + (/*index*/ ctx[25] + 2));
+    			attr_dev(input0, "name", input0_name_value = "sat week " + (/*index*/ ctx[26] + 2));
+    			attr_dev(input0, "data-name", input0_data_name_value = "sat week " + (/*index*/ ctx[26] + 2));
     			attr_dev(input0, "placeholder", "0");
     			attr_dev(input0, "id", "sat");
-    			add_location(input0, file$6, 301, 50, 9664);
+    			add_location(input0, file$6, 305, 50, 9919);
     			attr_dev(div1, "class", "day-wrap");
-    			add_location(div1, file$6, 300, 16, 9591);
+    			add_location(div1, file$6, 304, 16, 9846);
     			attr_dev(div2, "class", "day-label");
-    			add_location(div2, file$6, 311, 18, 10046);
+    			add_location(div2, file$6, 315, 18, 10301);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "field-input time-unit w-input svelte-eq46ml");
     			attr_dev(input1, "maxlength", "256");
-    			attr_dev(input1, "name", input1_name_value = "sun week " + (/*index*/ ctx[25] + 2));
-    			attr_dev(input1, "data-name", input1_data_name_value = "sun week " + (/*index*/ ctx[25] + 2));
+    			attr_dev(input1, "name", input1_name_value = "sun week " + (/*index*/ ctx[26] + 2));
+    			attr_dev(input1, "data-name", input1_data_name_value = "sun week " + (/*index*/ ctx[26] + 2));
     			attr_dev(input1, "placeholder", "0");
     			attr_dev(input1, "id", "sun");
-    			add_location(input1, file$6, 311, 50, 10078);
+    			add_location(input1, file$6, 315, 50, 10333);
     			attr_dev(div3, "class", "day-wrap");
-    			add_location(div3, file$6, 310, 16, 10005);
+    			add_location(div3, file$6, 314, 16, 10260);
     			attr_dev(div4, "class", "weekend-wrap");
-    			add_location(div4, file$6, 299, 14, 9548);
+    			add_location(div4, file$6, 303, 14, 9803);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div4, anchor);
@@ -4466,14 +4466,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(299:12) {#if includeWeekends}",
+    		source: "(303:12) {#if includeWeekends}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (323:12) {#if weeks == index + 1}
+    // (327:12) {#if weeks == index + 1}
     function create_if_block$1(ctx) {
     	let div;
     	let input;
@@ -4491,9 +4491,9 @@ var app = (function () {
     			attr_dev(input, "type", "button");
     			attr_dev(input, "class", "add-remove-button remove w-button svelte-eq46ml");
     			input.value = "–";
-    			add_location(input, file$6, 324, 16, 10540);
+    			add_location(input, file$6, 328, 16, 10795);
     			attr_dev(div, "class", "week-button-wrap");
-    			add_location(div, file$6, 323, 14, 10493);
+    			add_location(div, file$6, 327, 14, 10748);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4532,14 +4532,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(323:12) {#if weeks == index + 1}",
+    		source: "(327:12) {#if weeks == index + 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (330:16) {#if weeks < 5}
+    // (334:16) {#if weeks < 5}
     function create_if_block_1(ctx) {
     	let input;
     	let mounted;
@@ -4551,7 +4551,7 @@ var app = (function () {
     			attr_dev(input, "type", "button");
     			attr_dev(input, "class", "add-remove-button w-button svelte-eq46ml");
     			input.value = "+";
-    			add_location(input, file$6, 330, 18, 10763);
+    			add_location(input, file$6, 334, 18, 11018);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, input, anchor);
@@ -4573,21 +4573,21 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(330:16) {#if weeks < 5}",
+    		source: "(334:16) {#if weeks < 5}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (241:8) {#each Array(weeks) as week, index}
+    // (245:8) {#each Array(weeks) as week, index}
     function create_each_block$4(ctx) {
     	let div13;
     	let div2;
     	let div0;
     	let t1;
     	let div1;
-    	let t2_value = /*weekDates*/ ctx[7][/*index*/ ctx[25] + 1].format("DD/MM/YYYY") + "";
+    	let t2_value = /*weekDates*/ ctx[7][/*index*/ ctx[26] + 1].format("DD/MM/YYYY") + "";
     	let t2;
     	let t3;
     	let div4;
@@ -4622,7 +4622,7 @@ var app = (function () {
     	let t13;
     	let t14;
     	let if_block0 = /*includeWeekends*/ ctx[5] && create_if_block_2(ctx);
-    	let if_block1 = /*weeks*/ ctx[1] == /*index*/ ctx[25] + 1 && create_if_block$1(ctx);
+    	let if_block1 = /*weeks*/ ctx[1] == /*index*/ ctx[26] + 1 && create_if_block$1(ctx);
 
     	const block = {
     		c: function create() {
@@ -4663,73 +4663,73 @@ var app = (function () {
     			t14 = space();
     			if (if_block1) if_block1.c();
     			attr_dev(div0, "class", "week-info-text");
-    			add_location(div0, file$6, 243, 14, 7437);
+    			add_location(div0, file$6, 247, 14, 7692);
     			attr_dev(div1, "class", "week-info-text");
-    			add_location(div1, file$6, 244, 14, 7501);
+    			add_location(div1, file$6, 248, 14, 7756);
     			attr_dev(div2, "class", "week-info");
-    			add_location(div2, file$6, 242, 12, 7399);
+    			add_location(div2, file$6, 246, 12, 7654);
     			attr_dev(div3, "class", "day-label");
-    			add_location(div3, file$6, 249, 14, 7679);
+    			add_location(div3, file$6, 253, 14, 7934);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "field-input time-unit w-input svelte-eq46ml");
     			attr_dev(input0, "maxlength", "256");
-    			attr_dev(input0, "name", input0_name_value = "mon week " + (/*index*/ ctx[25] + 2));
-    			attr_dev(input0, "data-name", input0_data_name_value = "mon week " + (/*index*/ ctx[25] + 2));
+    			attr_dev(input0, "name", input0_name_value = "mon week " + (/*index*/ ctx[26] + 2));
+    			attr_dev(input0, "data-name", input0_data_name_value = "mon week " + (/*index*/ ctx[26] + 2));
     			attr_dev(input0, "placeholder", "0");
     			attr_dev(input0, "id", "mon");
-    			add_location(input0, file$6, 249, 46, 7711);
+    			add_location(input0, file$6, 253, 46, 7966);
     			attr_dev(div4, "class", "day-wrap");
-    			add_location(div4, file$6, 248, 12, 7642);
+    			add_location(div4, file$6, 252, 12, 7897);
     			attr_dev(div5, "class", "day-label");
-    			add_location(div5, file$6, 259, 14, 8053);
+    			add_location(div5, file$6, 263, 14, 8308);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "field-input time-unit w-input svelte-eq46ml");
     			attr_dev(input1, "maxlength", "256");
-    			attr_dev(input1, "name", input1_name_value = "tue week " + (/*index*/ ctx[25] + 2));
-    			attr_dev(input1, "data-name", input1_data_name_value = "tue week " + (/*index*/ ctx[25] + 2));
+    			attr_dev(input1, "name", input1_name_value = "tue week " + (/*index*/ ctx[26] + 2));
+    			attr_dev(input1, "data-name", input1_data_name_value = "tue week " + (/*index*/ ctx[26] + 2));
     			attr_dev(input1, "placeholder", "0");
     			attr_dev(input1, "id", "tue");
-    			add_location(input1, file$6, 259, 46, 8085);
+    			add_location(input1, file$6, 263, 46, 8340);
     			attr_dev(div6, "class", "day-wrap");
-    			add_location(div6, file$6, 258, 12, 8016);
+    			add_location(div6, file$6, 262, 12, 8271);
     			attr_dev(div7, "class", "day-label");
-    			add_location(div7, file$6, 269, 14, 8427);
+    			add_location(div7, file$6, 273, 14, 8682);
     			attr_dev(input2, "type", "text");
     			attr_dev(input2, "class", "field-input time-unit w-input svelte-eq46ml");
     			attr_dev(input2, "maxlength", "256");
-    			attr_dev(input2, "name", input2_name_value = "wed week " + (/*index*/ ctx[25] + 2));
-    			attr_dev(input2, "data-name", input2_data_name_value = "wed week " + (/*index*/ ctx[25] + 2));
+    			attr_dev(input2, "name", input2_name_value = "wed week " + (/*index*/ ctx[26] + 2));
+    			attr_dev(input2, "data-name", input2_data_name_value = "wed week " + (/*index*/ ctx[26] + 2));
     			attr_dev(input2, "placeholder", "0");
     			attr_dev(input2, "id", "wed");
-    			add_location(input2, file$6, 269, 46, 8459);
+    			add_location(input2, file$6, 273, 46, 8714);
     			attr_dev(div8, "class", "day-wrap");
-    			add_location(div8, file$6, 268, 12, 8390);
+    			add_location(div8, file$6, 272, 12, 8645);
     			attr_dev(div9, "class", "day-label");
-    			add_location(div9, file$6, 279, 14, 8801);
+    			add_location(div9, file$6, 283, 14, 9056);
     			attr_dev(input3, "type", "text");
     			attr_dev(input3, "class", "field-input time-unit w-input svelte-eq46ml");
     			attr_dev(input3, "maxlength", "256");
-    			attr_dev(input3, "name", input3_name_value = "thu week " + (/*index*/ ctx[25] + 2));
-    			attr_dev(input3, "data-name", input3_data_name_value = "thu week " + (/*index*/ ctx[25] + 2));
+    			attr_dev(input3, "name", input3_name_value = "thu week " + (/*index*/ ctx[26] + 2));
+    			attr_dev(input3, "data-name", input3_data_name_value = "thu week " + (/*index*/ ctx[26] + 2));
     			attr_dev(input3, "placeholder", "0");
     			attr_dev(input3, "id", "thu");
-    			add_location(input3, file$6, 279, 46, 8833);
+    			add_location(input3, file$6, 283, 46, 9088);
     			attr_dev(div10, "class", "day-wrap");
-    			add_location(div10, file$6, 278, 12, 8764);
+    			add_location(div10, file$6, 282, 12, 9019);
     			attr_dev(div11, "class", "day-label");
-    			add_location(div11, file$6, 289, 14, 9175);
+    			add_location(div11, file$6, 293, 14, 9430);
     			attr_dev(input4, "type", "text");
     			attr_dev(input4, "class", "field-input time-unit w-input svelte-eq46ml");
     			attr_dev(input4, "maxlength", "256");
-    			attr_dev(input4, "name", input4_name_value = "fri week " + (/*index*/ ctx[25] + 2));
-    			attr_dev(input4, "data-name", input4_data_name_value = "fri week " + (/*index*/ ctx[25] + 2));
+    			attr_dev(input4, "name", input4_name_value = "fri week " + (/*index*/ ctx[26] + 2));
+    			attr_dev(input4, "data-name", input4_data_name_value = "fri week " + (/*index*/ ctx[26] + 2));
     			attr_dev(input4, "placeholder", "0");
     			attr_dev(input4, "id", "fri");
-    			add_location(input4, file$6, 289, 46, 9207);
+    			add_location(input4, file$6, 293, 46, 9462);
     			attr_dev(div12, "class", "day-wrap");
-    			add_location(div12, file$6, 288, 12, 9138);
+    			add_location(div12, file$6, 292, 12, 9393);
     			attr_dev(div13, "class", "form-content-wrap week-row");
-    			add_location(div13, file$6, 241, 10, 7346);
+    			add_location(div13, file$6, 245, 10, 7601);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div13, anchor);
@@ -4764,7 +4764,7 @@ var app = (function () {
     			if (if_block1) if_block1.m(div13, null);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*weekDates*/ 128 && t2_value !== (t2_value = /*weekDates*/ ctx[7][/*index*/ ctx[25] + 1].format("DD/MM/YYYY") + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*weekDates*/ 128 && t2_value !== (t2_value = /*weekDates*/ ctx[7][/*index*/ ctx[26] + 1].format("DD/MM/YYYY") + "")) set_data_dev(t2, t2_value);
 
     			if (/*includeWeekends*/ ctx[5]) {
     				if (if_block0) ; else {
@@ -4777,7 +4777,7 @@ var app = (function () {
     				if_block0 = null;
     			}
 
-    			if (/*weeks*/ ctx[1] == /*index*/ ctx[25] + 1) {
+    			if (/*weeks*/ ctx[1] == /*index*/ ctx[26] + 1) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
     				} else {
@@ -4801,14 +4801,14 @@ var app = (function () {
     		block,
     		id: create_each_block$4.name,
     		type: "each",
-    		source: "(241:8) {#each Array(weeks) as week, index}",
+    		source: "(245:8) {#each Array(weeks) as week, index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (73:4) <Form bind:values={timesheetData}>
+    // (77:4) <Form bind:values={timesheetData}>
     function create_default_slot$1(ctx) {
     	let div3;
     	let div2;
@@ -5068,42 +5068,42 @@ var app = (function () {
     			pre = element("pre");
     			t45 = text(t45_value);
     			attr_dev(div0, "class", "form-section-title");
-    			add_location(div0, file$6, 75, 10, 1878);
+    			add_location(div0, file$6, 79, 10, 2133);
     			attr_dev(div1, "class", "paragraph");
-    			add_location(div1, file$6, 76, 10, 1949);
+    			add_location(div1, file$6, 80, 10, 2204);
     			option0.__value = "hourly";
     			option0.value = option0.__value;
-    			add_location(option0, file$6, 83, 48, 2228);
+    			add_location(option0, file$6, 87, 48, 2483);
     			option1.__value = "daily";
     			option1.value = option1.__value;
-    			add_location(option1, file$6, 86, 12, 2307);
+    			add_location(option1, file$6, 90, 12, 2562);
     			attr_dev(select, "id", "time-unit-select");
     			attr_dev(select, "name", "time-unit-select");
     			attr_dev(select, "data-name", "time-unit-select");
     			select.required = "";
     			attr_dev(select, "class", "field-input select w-select");
-    			add_location(select, file$6, 78, 16, 2037);
+    			add_location(select, file$6, 82, 16, 2292);
     			attr_dev(input0, "type", "checkbox");
     			attr_dev(input0, "id", "weekend-checkbox");
     			attr_dev(input0, "name", "weekend-checkbox");
     			attr_dev(input0, "data-name", "weekend-checkbox");
     			attr_dev(input0, "class", "w-checkbox-input svelte-eq46ml");
-    			add_location(input0, file$6, 87, 36, 2389);
+    			add_location(input0, file$6, 91, 36, 2644);
     			attr_dev(span, "for", "weekend-checkbox");
     			attr_dev(span, "class", "paragraph w-form-label");
-    			add_location(span, file$6, 93, 41, 2629);
+    			add_location(span, file$6, 97, 41, 2884);
     			attr_dev(label, "class", "w-checkbox");
-    			add_location(label, file$6, 87, 10, 2363);
+    			add_location(label, file$6, 91, 10, 2618);
     			attr_dev(div2, "class", "form-title-wrap");
-    			add_location(div2, file$6, 74, 8, 1838);
+    			add_location(div2, file$6, 78, 8, 2093);
     			attr_dev(p0, "class", "paragraph");
-    			add_location(p0, file$6, 98, 8, 2774);
+    			add_location(p0, file$6, 102, 8, 3029);
     			attr_dev(div3, "class", "form-content");
-    			add_location(div3, file$6, 73, 6, 1803);
+    			add_location(div3, file$6, 77, 6, 2058);
     			attr_dev(div4, "class", "week-info");
-    			add_location(div4, file$6, 119, 10, 3503);
+    			add_location(div4, file$6, 123, 10, 3758);
     			attr_dev(div5, "class", "day-label");
-    			add_location(div5, file$6, 129, 12, 3817);
+    			add_location(div5, file$6, 133, 12, 4072);
     			attr_dev(input1, "type", "number");
     			attr_dev(input1, "min", "0");
     			attr_dev(input1, "max", "16");
@@ -5115,11 +5115,11 @@ var app = (function () {
     			input1.value = "0";
     			input1.required = true;
     			attr_dev(input1, "id", "mon");
-    			add_location(input1, file$6, 129, 44, 3849);
+    			add_location(input1, file$6, 133, 44, 4104);
     			attr_dev(div6, "class", "day-wrap");
-    			add_location(div6, file$6, 128, 10, 3782);
+    			add_location(div6, file$6, 132, 10, 4037);
     			attr_dev(div7, "class", "day-label");
-    			add_location(div7, file$6, 143, 12, 4245);
+    			add_location(div7, file$6, 147, 12, 4500);
     			attr_dev(input2, "type", "number");
     			attr_dev(input2, "min", "0");
     			attr_dev(input2, "max", "16");
@@ -5131,11 +5131,11 @@ var app = (function () {
     			input2.value = "0";
     			input2.required = true;
     			attr_dev(input2, "id", "tue");
-    			add_location(input2, file$6, 143, 44, 4277);
+    			add_location(input2, file$6, 147, 44, 4532);
     			attr_dev(div8, "class", "day-wrap");
-    			add_location(div8, file$6, 142, 10, 4210);
+    			add_location(div8, file$6, 146, 10, 4465);
     			attr_dev(div9, "class", "day-label");
-    			add_location(div9, file$6, 157, 12, 4673);
+    			add_location(div9, file$6, 161, 12, 4928);
     			attr_dev(input3, "type", "number");
     			attr_dev(input3, "min", "0");
     			attr_dev(input3, "max", "16");
@@ -5147,11 +5147,11 @@ var app = (function () {
     			input3.value = "0";
     			input3.required = true;
     			attr_dev(input3, "id", "wed");
-    			add_location(input3, file$6, 157, 44, 4705);
+    			add_location(input3, file$6, 161, 44, 4960);
     			attr_dev(div10, "class", "day-wrap");
-    			add_location(div10, file$6, 156, 10, 4638);
+    			add_location(div10, file$6, 160, 10, 4893);
     			attr_dev(div11, "class", "day-label");
-    			add_location(div11, file$6, 171, 12, 5101);
+    			add_location(div11, file$6, 175, 12, 5356);
     			attr_dev(input4, "type", "number");
     			attr_dev(input4, "min", "0");
     			attr_dev(input4, "max", "16");
@@ -5163,11 +5163,11 @@ var app = (function () {
     			input4.value = "0";
     			input4.required = true;
     			attr_dev(input4, "id", "thu");
-    			add_location(input4, file$6, 171, 44, 5133);
+    			add_location(input4, file$6, 175, 44, 5388);
     			attr_dev(div12, "class", "day-wrap");
-    			add_location(div12, file$6, 170, 10, 5066);
+    			add_location(div12, file$6, 174, 10, 5321);
     			attr_dev(div13, "class", "day-label");
-    			add_location(div13, file$6, 185, 12, 5529);
+    			add_location(div13, file$6, 189, 12, 5784);
     			attr_dev(input5, "type", "number");
     			attr_dev(input5, "min", "0");
     			attr_dev(input5, "max", "16");
@@ -5179,14 +5179,14 @@ var app = (function () {
     			input5.value = "0";
     			input5.required = true;
     			attr_dev(input5, "id", "fri");
-    			add_location(input5, file$6, 185, 44, 5561);
+    			add_location(input5, file$6, 189, 44, 5816);
     			attr_dev(div14, "class", "day-wrap");
-    			add_location(div14, file$6, 184, 10, 5494);
+    			add_location(div14, file$6, 188, 10, 5749);
     			attr_dev(div15, "class", "form-content-wrap week-row");
-    			add_location(div15, file$6, 118, 8, 3452);
-    			add_location(div16, file$6, 343, 12, 11136);
+    			add_location(div15, file$6, 122, 8, 3707);
+    			add_location(div16, file$6, 347, 12, 11391);
     			attr_dev(div17, "class", "label-with-tooltip");
-    			add_location(div17, file$6, 342, 10, 11091);
+    			add_location(div17, file$6, 346, 10, 11346);
     			attr_dev(input6, "type", "email");
     			attr_dev(input6, "class", "field-input w-input svelte-eq46ml");
     			attr_dev(input6, "maxlength", "256");
@@ -5194,12 +5194,12 @@ var app = (function () {
     			attr_dev(input6, "data-name", "emailinput");
     			attr_dev(input6, "placeholder", "John Smith");
     			attr_dev(input6, "id", "emailinput");
-    			add_location(input6, file$6, 344, 16, 11195);
+    			add_location(input6, file$6, 348, 16, 11450);
     			attr_dev(div18, "class", "form-content-wrap vertical");
-    			add_location(div18, file$6, 341, 8, 11040);
-    			add_location(div19, file$6, 355, 12, 11547);
+    			add_location(div18, file$6, 345, 8, 11295);
+    			add_location(div19, file$6, 359, 12, 11802);
     			attr_dev(div20, "class", "label-with-tooltip");
-    			add_location(div20, file$6, 354, 10, 11502);
+    			add_location(div20, file$6, 358, 10, 11757);
     			attr_dev(input7, "type", "email");
     			attr_dev(input7, "class", "field-input w-input svelte-eq46ml");
     			attr_dev(input7, "maxlength", "256");
@@ -5207,12 +5207,12 @@ var app = (function () {
     			attr_dev(input7, "data-name", "manageremailinput");
     			attr_dev(input7, "placeholder", "John Smith");
     			attr_dev(input7, "id", "manageremailinput");
-    			add_location(input7, file$6, 359, 16, 11690);
+    			add_location(input7, file$6, 363, 16, 11945);
     			attr_dev(div21, "class", "form-content-wrap vertical");
-    			add_location(div21, file$6, 353, 8, 11451);
-    			add_location(div22, file$6, 370, 12, 12063);
+    			add_location(div21, file$6, 357, 8, 11706);
+    			add_location(div22, file$6, 374, 12, 12318);
     			attr_dev(div23, "class", "label-with-tooltip");
-    			add_location(div23, file$6, 369, 10, 12018);
+    			add_location(div23, file$6, 373, 10, 12273);
     			attr_dev(input8, "type", "text");
     			attr_dev(input8, "class", "field-input longer w-input svelte-eq46ml");
     			attr_dev(input8, "maxlength", "256");
@@ -5220,31 +5220,32 @@ var app = (function () {
     			attr_dev(input8, "data-name", "project-placeholder-text");
     			attr_dev(input8, "placeholder", "eg. Wrote custom code for time approved input forms.");
     			attr_dev(input8, "id", "project-placeholder-text");
-    			add_location(input8, file$6, 371, 16, 12144);
+    			add_location(input8, file$6, 375, 16, 12399);
     			attr_dev(div24, "class", "form-content-wrap vertical");
-    			add_location(div24, file$6, 368, 8, 11967);
+    			add_location(div24, file$6, 372, 8, 12222);
     			attr_dev(div25, "class", "form-section-title");
-    			add_location(div25, file$6, 382, 12, 12575);
-    			add_location(br, file$6, 387, 48, 12946);
+    			add_location(div25, file$6, 386, 12, 12830);
+    			add_location(br, file$6, 391, 48, 13201);
     			attr_dev(p1, "class", "paragraph");
-    			add_location(p1, file$6, 383, 12, 12645);
+    			add_location(p1, file$6, 387, 12, 12900);
     			attr_dev(div26, "class", "form-title-wrap");
-    			add_location(div26, file$6, 381, 10, 12533);
+    			add_location(div26, file$6, 385, 10, 12788);
     			attr_dev(button, "class", "submit-button w-button");
-    			add_location(button, file$6, 389, 16, 12986);
+    			attr_dev(button, "type", "submit");
+    			add_location(button, file$6, 393, 16, 13241);
     			attr_dev(a0, "href", "");
     			attr_dev(a0, "class", "form07_link");
-    			add_location(a0, file$6, 394, 12, 13228);
+    			add_location(a0, file$6, 399, 12, 13509);
     			attr_dev(a1, "href", "");
     			attr_dev(a1, "class", "form07_link");
-    			add_location(a1, file$6, 396, 12, 13294);
-    			add_location(pre, file$6, 397, 12, 13353);
+    			add_location(a1, file$6, 401, 12, 13575);
+    			add_location(pre, file$6, 402, 12, 13634);
     			attr_dev(div27, "class", "legal-disclaimer");
-    			add_location(div27, file$6, 392, 10, 13134);
+    			add_location(div27, file$6, 397, 10, 13415);
     			attr_dev(div28, "class", "form-content final");
-    			add_location(div28, file$6, 380, 8, 12490);
+    			add_location(div28, file$6, 384, 8, 12745);
     			attr_dev(div29, "class", "form-content-wrap vertical");
-    			add_location(div29, file$6, 102, 6, 2900);
+    			add_location(div29, file$6, 106, 6, 3155);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -5472,7 +5473,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(73:4) <Form bind:values={timesheetData}>",
+    		source: "(77:4) <Form bind:values={timesheetData}>",
     		ctx
     	});
 
@@ -5537,17 +5538,17 @@ var app = (function () {
     			t4 = space();
     			pre = element("pre");
     			t5 = text(t5_value);
-    			add_location(div0, file$6, 404, 6, 13583);
+    			add_location(div0, file$6, 409, 6, 13864);
     			attr_dev(div1, "class", "success-message w-form-done");
-    			add_location(div1, file$6, 403, 4, 13535);
-    			add_location(div2, file$6, 411, 6, 13886);
+    			add_location(div1, file$6, 408, 4, 13816);
+    			add_location(div2, file$6, 416, 6, 14167);
     			attr_dev(div3, "class", "error-message w-form-fail");
-    			add_location(div3, file$6, 410, 4, 13840);
+    			add_location(div3, file$6, 415, 4, 14121);
     			attr_dev(div4, "class", "form-wrapper w-form");
-    			add_location(div4, file$6, 71, 2, 1724);
+    			add_location(div4, file$6, 75, 2, 1979);
     			attr_dev(div5, "class", "form-full");
-    			add_location(div5, file$6, 70, 0, 1698);
-    			add_location(pre, file$6, 415, 0, 13977);
+    			add_location(div5, file$6, 74, 0, 1953);
+    			add_location(pre, file$6, 420, 0, 14258);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5570,7 +5571,7 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			const form_changes = {};
 
-    			if (dirty & /*$$scope, weekDates, timesheetData, weeks, includeWeekends, dateChosen, inThirtyDays, formattedSelected, selectedDate*/ 67109119) {
+    			if (dirty & /*$$scope, weekDates, timesheetData, weeks, includeWeekends, dateChosen, inThirtyDays, formattedSelected, selectedDate*/ 134217983) {
     				form_changes.$$scope = { dirty, ctx };
     			}
 
@@ -5631,6 +5632,12 @@ var app = (function () {
     	let selectedDate;
     	let includeWeekends = false;
     	const today = new Date();
+
+    	const validateEmail = email => {
+    		const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    		return re.test(String(email).toLowerCase());
+    	};
+
     	let mondaysOnlyCallback = date => date.getDay() !== 0 && date.getDay() !== 2 && date.getDay() !== 3 && date.getDay() !== 4 && date.getDay() !== 5 && date.getDay() !== 6;
     	let inThirtyDays;
     	let weekTwoStart;
@@ -5693,6 +5700,7 @@ var app = (function () {
     		selectedDate,
     		includeWeekends,
     		today,
+    		validateEmail,
     		mondaysOnlyCallback,
     		inThirtyDays,
     		weekTwoStart,

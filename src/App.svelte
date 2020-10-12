@@ -12,6 +12,10 @@
   let selectedDate;
   let includeWeekends = false;
   const today = new Date();
+  const validateEmail = (email) => {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+};
   let mondaysOnlyCallback = (date) =>
     date.getDay() !== 0 &&
     date.getDay() !== 2 &&
@@ -389,7 +393,8 @@
             </p>
           </div><button
             on:click|preventDefault={() => getFormData()}
-            class="submit-button w-button">Complete Submission</button>
+            class="submit-button w-button"
+            type="submit">Complete Submission</button>
           <div class="legal-disclaimer">
             By submitting, you are agreeing to our
             <a href class="form07_link">Terms</a>
