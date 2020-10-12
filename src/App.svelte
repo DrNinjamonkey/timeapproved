@@ -1,52 +1,14 @@
 <script>
-  import Datepicker from "svelte-calendar";
-  import dayjs from "dayjs";
+  import Date from "Date.svelte";
   import Form from "@svelteschool/svelte-forms";
 
-  let testData;
   let timesheetData;
-  let weeks = 0;
-  let dateFormat = "#{d}/#{m}/#{Y}";
-  let formattedSelected;
-  let dateChosen = false;
-  let selectedDate;
   let includeWeekends = false;
-  const today = new Date();
+  let weeks = 0;
   const validateEmail = (email) => {
-  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-};
-  let mondaysOnlyCallback = (date) =>
-    date.getDay() !== 0 &&
-    date.getDay() !== 2 &&
-    date.getDay() !== 3 &&
-    date.getDay() !== 4 &&
-    date.getDay() !== 5 &&
-    date.getDay() !== 6;
-
-  let inThirtyDays;
-  $: {
-    const date = new Date(today);
-    date.setDate(date.getDate() + 30);
-    inThirtyDays = date;
-  }
-
-  let weekTwoStart;
-  $: {
-    weekTwoStart = dayjs(selectedDate).add(7, "day");
-  }
-
-  let weekDates = [];
-  $: {
-    weekDates = [
-      dayjs(selectedDate),
-      dayjs(selectedDate).add(7, "day"),
-      dayjs(selectedDate).add(14, "day"),
-      dayjs(selectedDate).add(21, "day"),
-      dayjs(selectedDate).add(28, "day"),
-      dayjs(selectedDate).add(35, "day"),
-    ];
-  }
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  };
 
   const getFormData = () => {
     // console.log({
@@ -105,7 +67,7 @@
         </p>
       </div>
       <div class="form-content-wrap vertical">
-        <Datepicker
+        <!-- <Datepicker
           format={dateFormat}
           end={inThirtyDays}
           selectableCallback={mondaysOnlyCallback}
@@ -118,7 +80,8 @@
           dayBackgroundColor="#efefef"
           dayTextColor="#333"
           dayHighlightedBackgroundColor="#0064fe"
-          dayHighlightedTextColor="#fff" />
+          dayHighlightedTextColor="#fff" /> -->
+        <Date/>
 
         <div class="form-content-wrap week-row">
           <div class="week-info">
