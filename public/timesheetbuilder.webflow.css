@@ -123,6 +123,10 @@
   text-align: center;
 }
 
+.paragraph.top {
+  margin-bottom: 14px;
+}
+
 .error-message {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -251,15 +255,21 @@
 }
 
 .field-input.time-unit {
-  width: 40px;
+  width: 60px;
   height: 60px;
   margin-bottom: 0px;
   border-width: 2px;
   border-color: rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.field-input.time-unit.error {
+  border-width: 4px;
+  border-color: rgba(255, 0, 0, 0.15);
 }
 
 .field-input.longer {
-  min-height: 180px;
+  min-height: 100px;
 }
 
 .field-input.longer::-webkit-input-placeholder {
@@ -280,6 +290,11 @@
 
 .field-input.select {
   width: 50%;
+}
+
+.field-input.error {
+  border-width: 4px;
+  border-color: rgba(255, 0, 0, 0.15);
 }
 
 .success-message {
@@ -358,7 +373,7 @@
   position: absolute;
   left: auto;
   top: 0%;
-  right: -1%;
+  right: -5%;
   bottom: -8%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -411,6 +426,10 @@
   bottom: 0%;
   font-weight: 200;
   text-align: right;
+}
+
+.error-msg {
+  color: rgba(189, 25, 25, 0.81);
 }
 
 @media screen and (max-width: 767px) {
