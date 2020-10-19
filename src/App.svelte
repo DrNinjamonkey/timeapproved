@@ -2,6 +2,7 @@
   import Datepicker from "svelte-calendar";
   import dayjs from "dayjs";
   import Form from "@svelteschool/svelte-forms";
+  import Error from "./ErrorMsg.svelte";
 
   let dayInputValid = true;
   let candEmail;
@@ -18,10 +19,13 @@
   let includeWeekends = false;
   let timeSheetUnitSelected = "hourly";
   const today = new Date();
+
   const validateEmail = (email) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   };
+
+  // set the datepicker to only accept mondays
   let mondaysOnlyCallback = (date) =>
     date.getDay() !== 0 &&
     date.getDay() !== 2 &&
@@ -30,6 +34,7 @@
     date.getDay() !== 5 &&
     date.getDay() !== 6;
 
+  // max future date is today + 30 days
   let inThirtyDays;
   $: {
     const date = new Date(today);
@@ -37,6 +42,7 @@
     inThirtyDays = date;
   }
 
+  // array of weekcommencing days. updates as the date is picked or changed
   let weekDates = [];
   $: {
     weekDates = [
@@ -50,29 +56,33 @@
   }
 
   const getFormData = () => {
+    // set validations to true before running the checks
     dayInputValid = true;
+    // check emails are valid
     candEmailValid = validateEmail(candEmail);
     managerEmailValid = validateEmail(managerEmail);
+    // exit the function if either check comes back as false
     if (!candEmailValid || !managerEmailValid) return;
-
+    // build the empty object and add single values
     timesheetDataBetter = {};
     timesheetDataBetter.weeks = [];
     timesheetDataBetter.timeUnitSelected = timeSheetUnitSelected;
     timesheetDataBetter.managerEmail = timesheetData.manageremailinput;
     timesheetDataBetter.candidateEmail = timesheetData.emailinput;
     timesheetDataBetter.projectDesc = timesheetData.projectDesc;
+    // run through each week and add the day values (0 if NaN) and weekcommecing date
     for (let i = 0; i < weeks + 1; i++) {
       timesheetDataBetter.weeks.push({
         weekCommencing: weekDates[i],
-        mon: +timesheetData[`monWeek${i + 1}`],
-        tue: +timesheetData[`tueWeek${i + 1}`],
-        wed: +timesheetData[`wedWeek${i + 1}`],
-        thu: +timesheetData[`thuWeek${i + 1}`],
-        fri: +timesheetData[`friWeek${i + 1}`],
-        sat: +timesheetData[`satWeek${i + 1}`],
-        sun: +timesheetData[`sunWeek${i + 1}`],
+        mon: +timesheetData[`monWeek${i + 1}`] || 0,
+        tue: +timesheetData[`tueWeek${i + 1}`] || 0,
+        wed: +timesheetData[`wedWeek${i + 1}`] || 0,
+        thu: +timesheetData[`thuWeek${i + 1}`] || 0,
+        fri: +timesheetData[`friWeek${i + 1}`] || 0,
+        sat: +timesheetData[`satWeek${i + 1}`] || 0,
+        sun: +timesheetData[`sunWeek${i + 1}`] || 0,
       });
-
+      // check to see if any days have too many hours / days listed
       Object.keys(timesheetDataBetter.weeks[i])
         .filter((key) => key != "weekCommencing")
         .map((key) => {
@@ -85,20 +95,31 @@
             dayInputValid = false;
           }
         });
-      // if any date is less than one or more than 16 throw error
     }
+    //exit the function if the days are invalid
     if (!dayInputValid) return;
     console.log(timesheetDataBetter);
     console.log(timesheetData);
-    async () => {
-      await fetch(
-        `https://hook.integromat.com/qm43sxmnkfnkhiqdhaosipmeojppgtm7?${timesheetDataBetter}`
-      ).catch((err) => console.log(err));
-    };
+
+    // send the new object to integromat endpoint (will add a proper endpoint soon)
+    (async () => {
+      const rawResponse = await fetch(
+        "https://hook.integromat.com/qm43sxmnkfnkhiqdhaosipmeojppgtm7",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ timesheetDataBetter }),
+        }
+      );
+      // const content = await rawResponse.json();
+      // console.log(content);
+    })();
   };
 </script>
 
-<!-- //  redirect="/success" data-redirect="/success" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfa4w80QHhQ86KfD4--eP2ds0vCJseMC9C9Pjzy2-sM3ODG7w/formResponse" method="post" -->
 <style>
   /* Chrome, Safari, Edge, Opera */
   input::-webkit-outer-spin-button,
@@ -128,10 +149,10 @@
             data-name="time-unit-select"
             required=""
             class="field-input select w-select"
-            bind:value={timeSheetUnitSelected}><option value="hourly">
+            bind:value={timeSheetUnitSelected}><option value="hours">
               Hourly
             </option>
-            <option value="daily">Daily</option></select>
+            <option value="days">Daily</option></select>
           <label class="w-checkbox"><input
               type="checkbox"
               bind:checked={includeWeekends}
@@ -148,6 +169,7 @@
         </p>
       </div>
       <div class="form-content-wrap vertical">
+        <!-- Should this be in a component? -->
         <Datepicker
           format={dateFormat}
           end={inThirtyDays}
@@ -162,7 +184,7 @@
           dayTextColor="#333"
           dayHighlightedBackgroundColor="#0064fe"
           dayHighlightedTextColor="#fff" />
-
+        <!-- Should this be in a component? -->
         <div class="form-content-wrap week-row">
           <div class="week-info">
             {#if dateChosen}
@@ -283,7 +305,7 @@
               </div>
             {/if}
           {:else}
-            <div class="error-msg">Please select a start date</div>
+            <Error errMsgText="Please select a start date" />
           {/if}
           {#if dateChosen && weeks == 0}
             <div class="week-button-wrap">
@@ -295,6 +317,7 @@
             </div>
           {/if}
         </div>
+        <!-- Should this be in a component? -->
         {#each Array(weeks) as week, index}
           <div class="form-content-wrap week-row">
             <div class="week-info">
@@ -410,11 +433,10 @@
           </div>
         {/each}
         {#if !dayInputValid && timeSheetUnitSelected === 'hourly'}
-          <div class="error-msg">
-            You can only record between 0 and 16 hours per day!
-          </div>
+          <Error
+            errMsgText="You can only record between 0 and 16 hours per day!" />
         {:else if !dayInputValid && timeSheetUnitSelected === 'daily'}
-          <div class="error-msg">You can only record up to 1 day per day!</div>
+          <Error errMsgText="You can only record up to 1 day per day!" />
         {/if}
         <div class="form-content-wrap vertical">
           <div class="label-with-tooltip">
@@ -429,7 +451,7 @@
             placeholder="John Smith"
             id="emailinput" />
           {#if !candEmailValid}
-            <div class="error-msg">Please enter a valid email address</div>
+            <Error errMsgText="Please enter a valid email address" />
           {/if}
         </div>
         <div class="form-content-wrap vertical">
@@ -448,7 +470,10 @@
             placeholder="John Smith"
             id="manageremailinput" />
           {#if !managerEmailValid}
-            <div class="error-msg">Please enter a valid email address</div>
+            <Error errMsgText="Please enter a valid email address" />
+          {/if}
+          {#if candEmail && managerEmail === candEmail}
+            <Error errMsgText="Email addresses cannot be the same." />
           {/if}
         </div>
         <div class="form-content-wrap vertical">
