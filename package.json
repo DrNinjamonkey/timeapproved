@@ -8,7 +8,8 @@
     "build": "npm run build:tailwind && rollup -c",
     "start": "sirv public --single",
     "start:dev": "sirv public --single --dev --port 5555",
-    "autobuild": "rollup -c -w"
+    "autobuild": "rollup -c -w",
+    "validate": "svelte-check"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
@@ -20,7 +21,13 @@
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^6.0.0",
     "svelte": "^3.0.0",
-    "tailwindcss": "^1.7.2"
+    "tailwindcss": "^1.7.2",
+    "svelte-check": "^1.0.0",
+    "svelte-preprocess": "^4.0.0",
+    "@rollup/plugin-typescript": "^4.0.0",
+    "typescript": "^3.9.3",
+    "tslib": "^2.0.0",
+    "@tsconfig/svelte": "^1.0.0"
   },
   "dependencies": {
     "@svelteschool/svelte-forms": "^0.7.0",
