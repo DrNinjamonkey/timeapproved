@@ -4322,13 +4322,13 @@ var app = (function () {
 
     function get_each_context$4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[33] = list[i];
-    	child_ctx[35] = i;
+    	child_ctx[34] = list[i];
+    	child_ctx[36] = i;
     	return child_ctx;
     }
 
-    // (190:12) {#if dateChosen}
-    function create_if_block_11(ctx) {
+    // (195:12) {#if dateChosen}
+    function create_if_block_12(ctx) {
     	let div0;
     	let t1;
     	let div1;
@@ -4343,9 +4343,9 @@ var app = (function () {
     			div1 = element("div");
     			t2 = text(t2_value);
     			attr_dev(div0, "class", "week-info-text");
-    			add_location(div0, file$7, 190, 14, 6484);
+    			add_location(div0, file$7, 195, 14, 6775);
     			attr_dev(div1, "class", "week-info-text");
-    			add_location(div1, file$7, 191, 14, 6548);
+    			add_location(div1, file$7, 196, 14, 6839);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -4365,16 +4365,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_11.name,
+    		id: create_if_block_12.name,
     		type: "if",
-    		source: "(190:12) {#if dateChosen}",
+    		source: "(195:12) {#if dateChosen}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (307:10) {:else}
+    // (312:10) {:else}
     function create_else_block(ctx) {
     	let error;
     	let current;
@@ -4411,15 +4411,15 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(307:10) {:else}",
+    		source: "(312:10) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (198:10) {#if dateChosen}
-    function create_if_block_9(ctx) {
+    // (203:10) {#if dateChosen}
+    function create_if_block_10(ctx) {
     	let div1;
     	let div0;
     	let input0;
@@ -4441,7 +4441,7 @@ var app = (function () {
     	let input4;
     	let t9;
     	let if_block_anchor;
-    	let if_block = /*includeWeekends*/ ctx[10] && create_if_block_10(ctx);
+    	let if_block = /*includeWeekends*/ ctx[10] && create_if_block_11(ctx);
 
     	const block = {
     		c: function create() {
@@ -4473,7 +4473,7 @@ var app = (function () {
     			if (if_block) if_block.c();
     			if_block_anchor = empty();
     			attr_dev(div0, "class", "day-label");
-    			add_location(div0, file$7, 199, 14, 6762);
+    			add_location(div0, file$7, 204, 14, 7053);
     			attr_dev(input0, "type", "number");
     			attr_dev(input0, "min", "0");
     			attr_dev(input0, "class", "field-input time-unit w-input svelte-eq46ml");
@@ -4484,12 +4484,12 @@ var app = (function () {
     			input0.value = "0";
     			input0.required = true;
     			attr_dev(input0, "id", "mon");
-    			toggle_class(input0, "error", /*timesheetData*/ ctx[5].monWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5].monWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
-    			add_location(input0, file$7, 199, 46, 6794);
+    			toggle_class(input0, "error", /*timesheetData*/ ctx[5].monWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5].monWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
+    			add_location(input0, file$7, 204, 46, 7085);
     			attr_dev(div1, "class", "day-wrap");
-    			add_location(div1, file$7, 198, 12, 6725);
+    			add_location(div1, file$7, 203, 12, 7016);
     			attr_dev(div2, "class", "day-label");
-    			add_location(div2, file$7, 213, 14, 7356);
+    			add_location(div2, file$7, 218, 14, 7645);
     			attr_dev(input1, "type", "number");
     			attr_dev(input1, "min", "0");
     			attr_dev(input1, "max", "16");
@@ -4501,12 +4501,12 @@ var app = (function () {
     			input1.value = "0";
     			input1.required = true;
     			attr_dev(input1, "id", "tue");
-    			toggle_class(input1, "error", /*timesheetData*/ ctx[5].tueWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5].tueWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
-    			add_location(input1, file$7, 213, 46, 7388);
+    			toggle_class(input1, "error", /*timesheetData*/ ctx[5].tueWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5].tueWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
+    			add_location(input1, file$7, 218, 46, 7677);
     			attr_dev(div3, "class", "day-wrap");
-    			add_location(div3, file$7, 212, 12, 7319);
+    			add_location(div3, file$7, 217, 12, 7608);
     			attr_dev(div4, "class", "day-label");
-    			add_location(div4, file$7, 228, 14, 7975);
+    			add_location(div4, file$7, 233, 14, 8262);
     			attr_dev(input2, "type", "number");
     			attr_dev(input2, "min", "0");
     			attr_dev(input2, "max", "16");
@@ -4518,12 +4518,12 @@ var app = (function () {
     			input2.value = "0";
     			input2.required = true;
     			attr_dev(input2, "id", "wed");
-    			toggle_class(input2, "error", /*timesheetData*/ ctx[5].wedWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5].wedWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
-    			add_location(input2, file$7, 228, 46, 8007);
+    			toggle_class(input2, "error", /*timesheetData*/ ctx[5].wedWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5].wedWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
+    			add_location(input2, file$7, 233, 46, 8294);
     			attr_dev(div5, "class", "day-wrap");
-    			add_location(div5, file$7, 227, 12, 7938);
+    			add_location(div5, file$7, 232, 12, 8225);
     			attr_dev(div6, "class", "day-label");
-    			add_location(div6, file$7, 243, 14, 8594);
+    			add_location(div6, file$7, 248, 14, 8879);
     			attr_dev(input3, "type", "number");
     			attr_dev(input3, "min", "0");
     			attr_dev(input3, "max", "16");
@@ -4535,12 +4535,12 @@ var app = (function () {
     			input3.value = "0";
     			input3.required = true;
     			attr_dev(input3, "id", "thu");
-    			toggle_class(input3, "error", /*timesheetData*/ ctx[5].thuWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5].thuWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
-    			add_location(input3, file$7, 243, 46, 8626);
+    			toggle_class(input3, "error", /*timesheetData*/ ctx[5].thuWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5].thuWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
+    			add_location(input3, file$7, 248, 46, 8911);
     			attr_dev(div7, "class", "day-wrap");
-    			add_location(div7, file$7, 242, 12, 8557);
+    			add_location(div7, file$7, 247, 12, 8842);
     			attr_dev(div8, "class", "day-label");
-    			add_location(div8, file$7, 258, 14, 9213);
+    			add_location(div8, file$7, 263, 14, 9496);
     			attr_dev(input4, "type", "number");
     			attr_dev(input4, "min", "0");
     			attr_dev(input4, "max", "16");
@@ -4552,10 +4552,10 @@ var app = (function () {
     			input4.value = "0";
     			input4.required = true;
     			attr_dev(input4, "id", "fri");
-    			toggle_class(input4, "error", /*timesheetData*/ ctx[5].friWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5].friWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
-    			add_location(input4, file$7, 258, 46, 9245);
+    			toggle_class(input4, "error", /*timesheetData*/ ctx[5].friWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5].friWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
+    			add_location(input4, file$7, 263, 46, 9528);
     			attr_dev(div9, "class", "day-wrap");
-    			add_location(div9, file$7, 257, 12, 9176);
+    			add_location(div9, file$7, 262, 12, 9459);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -4583,30 +4583,30 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty[0] & /*timesheetData, timeSheetUnitSelected*/ 2080) {
-    				toggle_class(input0, "error", /*timesheetData*/ ctx[5].monWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5].monWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
+    				toggle_class(input0, "error", /*timesheetData*/ ctx[5].monWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5].monWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
     			}
 
     			if (dirty[0] & /*timesheetData, timeSheetUnitSelected*/ 2080) {
-    				toggle_class(input1, "error", /*timesheetData*/ ctx[5].tueWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5].tueWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
+    				toggle_class(input1, "error", /*timesheetData*/ ctx[5].tueWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5].tueWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
     			}
 
     			if (dirty[0] & /*timesheetData, timeSheetUnitSelected*/ 2080) {
-    				toggle_class(input2, "error", /*timesheetData*/ ctx[5].wedWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5].wedWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
+    				toggle_class(input2, "error", /*timesheetData*/ ctx[5].wedWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5].wedWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
     			}
 
     			if (dirty[0] & /*timesheetData, timeSheetUnitSelected*/ 2080) {
-    				toggle_class(input3, "error", /*timesheetData*/ ctx[5].thuWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5].thuWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
+    				toggle_class(input3, "error", /*timesheetData*/ ctx[5].thuWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5].thuWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
     			}
 
     			if (dirty[0] & /*timesheetData, timeSheetUnitSelected*/ 2080) {
-    				toggle_class(input4, "error", /*timesheetData*/ ctx[5].friWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5].friWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
+    				toggle_class(input4, "error", /*timesheetData*/ ctx[5].friWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5].friWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
     			}
 
     			if (/*includeWeekends*/ ctx[10]) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
-    					if_block = create_if_block_10(ctx);
+    					if_block = create_if_block_11(ctx);
     					if_block.c();
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
     				}
@@ -4635,17 +4635,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_9.name,
+    		id: create_if_block_10.name,
     		type: "if",
-    		source: "(198:10) {#if dateChosen}",
+    		source: "(203:10) {#if dateChosen}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (273:12) {#if includeWeekends}
-    function create_if_block_10(ctx) {
+    // (278:12) {#if includeWeekends}
+    function create_if_block_11(ctx) {
     	let div4;
     	let div1;
     	let div0;
@@ -4668,7 +4668,7 @@ var app = (function () {
     			div2.textContent = "SUN";
     			input1 = element("input");
     			attr_dev(div0, "class", "day-label");
-    			add_location(div0, file$7, 275, 18, 9915);
+    			add_location(div0, file$7, 280, 18, 10196);
     			attr_dev(input0, "type", "number");
     			attr_dev(input0, "min", "0");
     			attr_dev(input0, "max", "16");
@@ -4680,12 +4680,12 @@ var app = (function () {
     			input0.value = "0";
     			input0.required = true;
     			attr_dev(input0, "id", "sat");
-    			toggle_class(input0, "error", /*timesheetData*/ ctx[5].satWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5].satWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
-    			add_location(input0, file$7, 275, 50, 9947);
+    			toggle_class(input0, "error", /*timesheetData*/ ctx[5].satWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5].satWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
+    			add_location(input0, file$7, 280, 50, 10228);
     			attr_dev(div1, "class", "day-wrap");
-    			add_location(div1, file$7, 274, 16, 9874);
+    			add_location(div1, file$7, 279, 16, 10155);
     			attr_dev(div2, "class", "day-label");
-    			add_location(div2, file$7, 290, 18, 10594);
+    			add_location(div2, file$7, 295, 18, 10873);
     			attr_dev(input1, "type", "number");
     			attr_dev(input1, "min", "0");
     			attr_dev(input1, "max", "16");
@@ -4697,12 +4697,12 @@ var app = (function () {
     			input1.value = "0";
     			input1.required = true;
     			attr_dev(input1, "id", "sun");
-    			toggle_class(input1, "error", /*timesheetData*/ ctx[5].sunWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5].sunWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
-    			add_location(input1, file$7, 290, 50, 10626);
+    			toggle_class(input1, "error", /*timesheetData*/ ctx[5].sunWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5].sunWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
+    			add_location(input1, file$7, 295, 50, 10905);
     			attr_dev(div3, "class", "day-wrap");
-    			add_location(div3, file$7, 289, 16, 10553);
+    			add_location(div3, file$7, 294, 16, 10832);
     			attr_dev(div4, "class", "weekend-wrap");
-    			add_location(div4, file$7, 273, 14, 9831);
+    			add_location(div4, file$7, 278, 14, 10112);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div4, anchor);
@@ -4716,11 +4716,11 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty[0] & /*timesheetData, timeSheetUnitSelected*/ 2080) {
-    				toggle_class(input0, "error", /*timesheetData*/ ctx[5].satWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5].satWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
+    				toggle_class(input0, "error", /*timesheetData*/ ctx[5].satWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5].satWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
     			}
 
     			if (dirty[0] & /*timesheetData, timeSheetUnitSelected*/ 2080) {
-    				toggle_class(input1, "error", /*timesheetData*/ ctx[5].sunWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5].sunWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
+    				toggle_class(input1, "error", /*timesheetData*/ ctx[5].sunWeek1 > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5].sunWeek1 > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
     			}
     		},
     		d: function destroy(detaching) {
@@ -4730,17 +4730,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_10.name,
+    		id: create_if_block_11.name,
     		type: "if",
-    		source: "(273:12) {#if includeWeekends}",
+    		source: "(278:12) {#if includeWeekends}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (310:10) {#if dateChosen && weeks == 0}
-    function create_if_block_8(ctx) {
+    // (315:10) {#if dateChosen && weeks == 0}
+    function create_if_block_9(ctx) {
     	let div;
     	let input;
     	let mounted;
@@ -4753,16 +4753,16 @@ var app = (function () {
     			attr_dev(input, "type", "button");
     			attr_dev(input, "class", "add-remove-button w-button svelte-eq46ml");
     			input.value = "+";
-    			add_location(input, file$7, 311, 14, 11449);
+    			add_location(input, file$7, 316, 14, 11726);
     			attr_dev(div, "class", "week-button-wrap");
-    			add_location(div, file$7, 310, 12, 11404);
+    			add_location(div, file$7, 315, 12, 11681);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, input);
 
     			if (!mounted) {
-    				dispose = listen_dev(input, "click", /*click_handler_1*/ ctx[23], false, false, false);
+    				dispose = listen_dev(input, "click", /*click_handler_1*/ ctx[24], false, false, false);
     				mounted = true;
     			}
     		},
@@ -4776,17 +4776,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_8.name,
+    		id: create_if_block_9.name,
     		type: "if",
-    		source: "(310:10) {#if dateChosen && weeks == 0}",
+    		source: "(315:10) {#if dateChosen && weeks == 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (389:12) {#if includeWeekends}
-    function create_if_block_7(ctx) {
+    // (394:12) {#if includeWeekends}
+    function create_if_block_8(ctx) {
     	let div4;
     	let div1;
     	let div0;
@@ -4813,35 +4813,35 @@ var app = (function () {
     			div2.textContent = "SUN";
     			input1 = element("input");
     			attr_dev(div0, "class", "day-label");
-    			add_location(div0, file$7, 391, 18, 15134);
+    			add_location(div0, file$7, 396, 18, 15401);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "field-input time-unit w-input svelte-eq46ml");
     			attr_dev(input0, "maxlength", "256");
-    			attr_dev(input0, "name", input0_name_value = "satWeek" + (/*index*/ ctx[35] + 2));
-    			attr_dev(input0, "data-name", input0_data_name_value = "satWeek" + (/*index*/ ctx[35] + 2));
+    			attr_dev(input0, "name", input0_name_value = "satWeek" + (/*index*/ ctx[36] + 2));
+    			attr_dev(input0, "data-name", input0_data_name_value = "satWeek" + (/*index*/ ctx[36] + 2));
     			attr_dev(input0, "placeholder", "0");
     			input0.value = "0";
     			attr_dev(input0, "id", "sat");
-    			toggle_class(input0, "error", /*timesheetData*/ ctx[5][`satWeek${/*index*/ ctx[35] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5][`satWeek${/*index*/ ctx[35] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
-    			add_location(input0, file$7, 391, 50, 15166);
+    			toggle_class(input0, "error", /*timesheetData*/ ctx[5][`satWeek${/*index*/ ctx[36] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5][`satWeek${/*index*/ ctx[36] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
+    			add_location(input0, file$7, 396, 50, 15433);
     			attr_dev(div1, "class", "day-wrap");
-    			add_location(div1, file$7, 390, 16, 15093);
+    			add_location(div1, file$7, 395, 16, 15360);
     			attr_dev(div2, "class", "day-label");
-    			add_location(div2, file$7, 403, 18, 15773);
+    			add_location(div2, file$7, 408, 18, 16038);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "field-input time-unit w-input svelte-eq46ml");
     			attr_dev(input1, "maxlength", "256");
-    			attr_dev(input1, "name", input1_name_value = "sunWeek" + (/*index*/ ctx[35] + 2));
-    			attr_dev(input1, "data-name", input1_data_name_value = "sunWeek" + (/*index*/ ctx[35] + 2));
+    			attr_dev(input1, "name", input1_name_value = "sunWeek" + (/*index*/ ctx[36] + 2));
+    			attr_dev(input1, "data-name", input1_data_name_value = "sunWeek" + (/*index*/ ctx[36] + 2));
     			attr_dev(input1, "placeholder", "0");
     			input1.value = "0";
     			attr_dev(input1, "id", "sun");
-    			toggle_class(input1, "error", /*timesheetData*/ ctx[5][`sunWeek${/*index*/ ctx[35] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5][`sunWeek${/*index*/ ctx[35] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
-    			add_location(input1, file$7, 403, 50, 15805);
+    			toggle_class(input1, "error", /*timesheetData*/ ctx[5][`sunWeek${/*index*/ ctx[36] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5][`sunWeek${/*index*/ ctx[36] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
+    			add_location(input1, file$7, 408, 50, 16070);
     			attr_dev(div3, "class", "day-wrap");
-    			add_location(div3, file$7, 402, 16, 15732);
+    			add_location(div3, file$7, 407, 16, 15997);
     			attr_dev(div4, "class", "weekend-wrap");
-    			add_location(div4, file$7, 389, 14, 15050);
+    			add_location(div4, file$7, 394, 14, 15317);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div4, anchor);
@@ -4855,11 +4855,11 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty[0] & /*timesheetData, timeSheetUnitSelected*/ 2080) {
-    				toggle_class(input0, "error", /*timesheetData*/ ctx[5][`satWeek${/*index*/ ctx[35] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5][`satWeek${/*index*/ ctx[35] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
+    				toggle_class(input0, "error", /*timesheetData*/ ctx[5][`satWeek${/*index*/ ctx[36] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5][`satWeek${/*index*/ ctx[36] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
     			}
 
     			if (dirty[0] & /*timesheetData, timeSheetUnitSelected*/ 2080) {
-    				toggle_class(input1, "error", /*timesheetData*/ ctx[5][`sunWeek${/*index*/ ctx[35] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5][`sunWeek${/*index*/ ctx[35] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
+    				toggle_class(input1, "error", /*timesheetData*/ ctx[5][`sunWeek${/*index*/ ctx[36] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5][`sunWeek${/*index*/ ctx[36] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
     			}
     		},
     		d: function destroy(detaching) {
@@ -4869,23 +4869,23 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_7.name,
+    		id: create_if_block_8.name,
     		type: "if",
-    		source: "(389:12) {#if includeWeekends}",
+    		source: "(394:12) {#if includeWeekends}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (417:12) {#if weeks == index + 1}
-    function create_if_block_5(ctx) {
+    // (422:12) {#if weeks == index + 1}
+    function create_if_block_6(ctx) {
     	let div;
     	let input;
     	let t;
     	let mounted;
     	let dispose;
-    	let if_block = /*weeks*/ ctx[6] < 5 && create_if_block_6(ctx);
+    	let if_block = /*weeks*/ ctx[6] < 5 && create_if_block_7(ctx);
 
     	const block = {
     		c: function create() {
@@ -4896,9 +4896,9 @@ var app = (function () {
     			attr_dev(input, "type", "button");
     			attr_dev(input, "class", "add-remove-button remove w-button svelte-eq46ml");
     			input.value = "–";
-    			add_location(input, file$7, 418, 16, 16492);
+    			add_location(input, file$7, 423, 16, 16755);
     			attr_dev(div, "class", "week-button-wrap");
-    			add_location(div, file$7, 417, 14, 16445);
+    			add_location(div, file$7, 422, 14, 16708);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4907,7 +4907,7 @@ var app = (function () {
     			if (if_block) if_block.m(div, null);
 
     			if (!mounted) {
-    				dispose = listen_dev(input, "click", /*click_handler_2*/ ctx[24], false, false, false);
+    				dispose = listen_dev(input, "click", /*click_handler_2*/ ctx[25], false, false, false);
     				mounted = true;
     			}
     		},
@@ -4916,7 +4916,7 @@ var app = (function () {
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
-    					if_block = create_if_block_6(ctx);
+    					if_block = create_if_block_7(ctx);
     					if_block.c();
     					if_block.m(div, null);
     				}
@@ -4935,17 +4935,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_5.name,
+    		id: create_if_block_6.name,
     		type: "if",
-    		source: "(417:12) {#if weeks == index + 1}",
+    		source: "(422:12) {#if weeks == index + 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (424:16) {#if weeks < 5}
-    function create_if_block_6(ctx) {
+    // (429:16) {#if weeks < 5}
+    function create_if_block_7(ctx) {
     	let input;
     	let mounted;
     	let dispose;
@@ -4956,13 +4956,13 @@ var app = (function () {
     			attr_dev(input, "type", "button");
     			attr_dev(input, "class", "add-remove-button w-button svelte-eq46ml");
     			input.value = "+";
-    			add_location(input, file$7, 424, 18, 16715);
+    			add_location(input, file$7, 429, 18, 16978);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, input, anchor);
 
     			if (!mounted) {
-    				dispose = listen_dev(input, "click", /*click_handler_3*/ ctx[25], false, false, false);
+    				dispose = listen_dev(input, "click", /*click_handler_3*/ ctx[26], false, false, false);
     				mounted = true;
     			}
     		},
@@ -4976,23 +4976,23 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_6.name,
+    		id: create_if_block_7.name,
     		type: "if",
-    		source: "(424:16) {#if weeks < 5}",
+    		source: "(429:16) {#if weeks < 5}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (321:8) {#each Array(weeks) as week, index}
+    // (326:8) {#each Array(weeks) as week, index}
     function create_each_block$4(ctx) {
     	let div13;
     	let div2;
     	let div0;
     	let t1;
     	let div1;
-    	let t2_value = /*weekDates*/ ctx[13][/*index*/ ctx[35] + 1].format("DD/MM/YYYY") + "";
+    	let t2_value = /*weekDates*/ ctx[13][/*index*/ ctx[36] + 1].format("DD/MM/YYYY") + "";
     	let t2;
     	let t3;
     	let div4;
@@ -5027,8 +5027,8 @@ var app = (function () {
     	let input4_data_name_value;
     	let t13;
     	let t14;
-    	let if_block0 = /*includeWeekends*/ ctx[10] && create_if_block_7(ctx);
-    	let if_block1 = /*weeks*/ ctx[6] == /*index*/ ctx[35] + 1 && create_if_block_5(ctx);
+    	let if_block0 = /*includeWeekends*/ ctx[10] && create_if_block_8(ctx);
+    	let if_block1 = /*weeks*/ ctx[6] == /*index*/ ctx[36] + 1 && create_if_block_6(ctx);
 
     	const block = {
     		c: function create() {
@@ -5069,83 +5069,83 @@ var app = (function () {
     			t14 = space();
     			if (if_block1) if_block1.c();
     			attr_dev(div0, "class", "week-info-text");
-    			add_location(div0, file$7, 323, 14, 11850);
+    			add_location(div0, file$7, 328, 14, 12127);
     			attr_dev(div1, "class", "week-info-text");
-    			add_location(div1, file$7, 324, 14, 11914);
+    			add_location(div1, file$7, 329, 14, 12191);
     			attr_dev(div2, "class", "week-info");
-    			add_location(div2, file$7, 322, 12, 11812);
+    			add_location(div2, file$7, 327, 12, 12089);
     			attr_dev(div3, "class", "day-label");
-    			add_location(div3, file$7, 329, 14, 12092);
+    			add_location(div3, file$7, 334, 14, 12369);
     			attr_dev(input0, "type", "number");
     			attr_dev(input0, "class", input0_class_value = "" + (null_to_empty("field-input time-unit w-input") + " svelte-eq46ml"));
     			attr_dev(input0, "maxlength", "256");
-    			attr_dev(input0, "name", input0_name_value = "monWeek" + (/*index*/ ctx[35] + 2));
-    			attr_dev(input0, "data-name", input0_data_name_value = "monWeek" + (/*index*/ ctx[35] + 2));
+    			attr_dev(input0, "name", input0_name_value = "monWeek" + (/*index*/ ctx[36] + 2));
+    			attr_dev(input0, "data-name", input0_data_name_value = "monWeek" + (/*index*/ ctx[36] + 2));
     			attr_dev(input0, "placeholder", "0");
     			input0.value = "0";
     			attr_dev(input0, "id", "mon");
-    			toggle_class(input0, "error", /*timesheetData*/ ctx[5][`monWeek${/*index*/ ctx[35] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5][`monWeek${/*index*/ ctx[35] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
-    			add_location(input0, file$7, 329, 46, 12124);
+    			toggle_class(input0, "error", /*timesheetData*/ ctx[5][`monWeek${/*index*/ ctx[36] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5][`monWeek${/*index*/ ctx[36] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
+    			add_location(input0, file$7, 334, 46, 12401);
     			attr_dev(div4, "class", "day-wrap");
-    			add_location(div4, file$7, 328, 12, 12055);
+    			add_location(div4, file$7, 333, 12, 12332);
     			attr_dev(div5, "class", "day-label");
-    			add_location(div5, file$7, 341, 14, 12687);
+    			add_location(div5, file$7, 346, 14, 12962);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "field-input time-unit w-input svelte-eq46ml");
     			attr_dev(input1, "maxlength", "256");
-    			attr_dev(input1, "name", input1_name_value = "tueWeek" + (/*index*/ ctx[35] + 2));
-    			attr_dev(input1, "data-name", input1_data_name_value = "tueWeek" + (/*index*/ ctx[35] + 2));
+    			attr_dev(input1, "name", input1_name_value = "tueWeek" + (/*index*/ ctx[36] + 2));
+    			attr_dev(input1, "data-name", input1_data_name_value = "tueWeek" + (/*index*/ ctx[36] + 2));
     			attr_dev(input1, "placeholder", "0");
     			input1.value = "0";
     			attr_dev(input1, "id", "tue");
-    			toggle_class(input1, "error", /*timesheetData*/ ctx[5][`tueWeek${/*index*/ ctx[35] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5][`tueWeek${/*index*/ ctx[35] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
-    			add_location(input1, file$7, 341, 46, 12719);
+    			toggle_class(input1, "error", /*timesheetData*/ ctx[5][`tueWeek${/*index*/ ctx[36] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5][`tueWeek${/*index*/ ctx[36] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
+    			add_location(input1, file$7, 346, 46, 12994);
     			attr_dev(div6, "class", "day-wrap");
-    			add_location(div6, file$7, 340, 12, 12650);
+    			add_location(div6, file$7, 345, 12, 12925);
     			attr_dev(div7, "class", "day-label");
-    			add_location(div7, file$7, 353, 14, 13278);
+    			add_location(div7, file$7, 358, 14, 13551);
     			attr_dev(input2, "type", "text");
     			attr_dev(input2, "class", "field-input time-unit w-input svelte-eq46ml");
     			attr_dev(input2, "maxlength", "256");
-    			attr_dev(input2, "name", input2_name_value = "wedWeek" + (/*index*/ ctx[35] + 2));
-    			attr_dev(input2, "data-name", input2_data_name_value = "wedWeek" + (/*index*/ ctx[35] + 2));
+    			attr_dev(input2, "name", input2_name_value = "wedWeek" + (/*index*/ ctx[36] + 2));
+    			attr_dev(input2, "data-name", input2_data_name_value = "wedWeek" + (/*index*/ ctx[36] + 2));
     			attr_dev(input2, "placeholder", "0");
     			input2.value = "0";
     			attr_dev(input2, "id", "wed");
-    			toggle_class(input2, "error", /*timesheetData*/ ctx[5][`wedWeek${/*index*/ ctx[35] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5][`wedWeek${/*index*/ ctx[35] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
-    			add_location(input2, file$7, 353, 46, 13310);
+    			toggle_class(input2, "error", /*timesheetData*/ ctx[5][`wedWeek${/*index*/ ctx[36] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5][`wedWeek${/*index*/ ctx[36] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
+    			add_location(input2, file$7, 358, 46, 13583);
     			attr_dev(div8, "class", "day-wrap");
-    			add_location(div8, file$7, 352, 12, 13241);
+    			add_location(div8, file$7, 357, 12, 13514);
     			attr_dev(div9, "class", "day-label");
-    			add_location(div9, file$7, 365, 14, 13869);
+    			add_location(div9, file$7, 370, 14, 14140);
     			attr_dev(input3, "type", "text");
     			attr_dev(input3, "class", "field-input time-unit w-input svelte-eq46ml");
     			attr_dev(input3, "maxlength", "256");
-    			attr_dev(input3, "name", input3_name_value = "thuWeek" + (/*index*/ ctx[35] + 2));
-    			attr_dev(input3, "data-name", input3_data_name_value = "thuWeek" + (/*index*/ ctx[35] + 2));
+    			attr_dev(input3, "name", input3_name_value = "thuWeek" + (/*index*/ ctx[36] + 2));
+    			attr_dev(input3, "data-name", input3_data_name_value = "thuWeek" + (/*index*/ ctx[36] + 2));
     			attr_dev(input3, "placeholder", "0");
     			input3.value = "0";
     			attr_dev(input3, "id", "thu");
-    			toggle_class(input3, "error", /*timesheetData*/ ctx[5][`thuWeek${/*index*/ ctx[35] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5][`thuWeek${/*index*/ ctx[35] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
-    			add_location(input3, file$7, 365, 46, 13901);
+    			toggle_class(input3, "error", /*timesheetData*/ ctx[5][`thuWeek${/*index*/ ctx[36] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5][`thuWeek${/*index*/ ctx[36] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
+    			add_location(input3, file$7, 370, 46, 14172);
     			attr_dev(div10, "class", "day-wrap");
-    			add_location(div10, file$7, 364, 12, 13832);
+    			add_location(div10, file$7, 369, 12, 14103);
     			attr_dev(div11, "class", "day-label");
-    			add_location(div11, file$7, 377, 14, 14460);
+    			add_location(div11, file$7, 382, 14, 14729);
     			attr_dev(input4, "type", "text");
     			attr_dev(input4, "class", "field-input time-unit w-input svelte-eq46ml");
     			attr_dev(input4, "maxlength", "256");
-    			attr_dev(input4, "name", input4_name_value = "friWeek" + (/*index*/ ctx[35] + 2));
-    			attr_dev(input4, "data-name", input4_data_name_value = "friWeek" + (/*index*/ ctx[35] + 2));
+    			attr_dev(input4, "name", input4_name_value = "friWeek" + (/*index*/ ctx[36] + 2));
+    			attr_dev(input4, "data-name", input4_data_name_value = "friWeek" + (/*index*/ ctx[36] + 2));
     			attr_dev(input4, "placeholder", "0");
     			input4.value = "0";
     			attr_dev(input4, "id", "fri");
-    			toggle_class(input4, "error", /*timesheetData*/ ctx[5][`friWeek${/*index*/ ctx[35] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5][`friWeek${/*index*/ ctx[35] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
-    			add_location(input4, file$7, 377, 46, 14492);
+    			toggle_class(input4, "error", /*timesheetData*/ ctx[5][`friWeek${/*index*/ ctx[36] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5][`friWeek${/*index*/ ctx[36] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
+    			add_location(input4, file$7, 382, 46, 14761);
     			attr_dev(div12, "class", "day-wrap");
-    			add_location(div12, file$7, 376, 12, 14423);
+    			add_location(div12, file$7, 381, 12, 14692);
     			attr_dev(div13, "class", "form-content-wrap week-row");
-    			add_location(div13, file$7, 321, 10, 11759);
+    			add_location(div13, file$7, 326, 10, 12036);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div13, anchor);
@@ -5180,33 +5180,33 @@ var app = (function () {
     			if (if_block1) if_block1.m(div13, null);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*weekDates*/ 8192 && t2_value !== (t2_value = /*weekDates*/ ctx[13][/*index*/ ctx[35] + 1].format("DD/MM/YYYY") + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*weekDates*/ 8192 && t2_value !== (t2_value = /*weekDates*/ ctx[13][/*index*/ ctx[36] + 1].format("DD/MM/YYYY") + "")) set_data_dev(t2, t2_value);
 
     			if (dirty[0] & /*timesheetData, timeSheetUnitSelected*/ 2080) {
-    				toggle_class(input0, "error", /*timesheetData*/ ctx[5][`monWeek${/*index*/ ctx[35] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5][`monWeek${/*index*/ ctx[35] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
+    				toggle_class(input0, "error", /*timesheetData*/ ctx[5][`monWeek${/*index*/ ctx[36] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5][`monWeek${/*index*/ ctx[36] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
     			}
 
     			if (dirty[0] & /*timesheetData, timeSheetUnitSelected*/ 2080) {
-    				toggle_class(input1, "error", /*timesheetData*/ ctx[5][`tueWeek${/*index*/ ctx[35] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5][`tueWeek${/*index*/ ctx[35] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
+    				toggle_class(input1, "error", /*timesheetData*/ ctx[5][`tueWeek${/*index*/ ctx[36] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5][`tueWeek${/*index*/ ctx[36] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
     			}
 
     			if (dirty[0] & /*timesheetData, timeSheetUnitSelected*/ 2080) {
-    				toggle_class(input2, "error", /*timesheetData*/ ctx[5][`wedWeek${/*index*/ ctx[35] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5][`wedWeek${/*index*/ ctx[35] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
+    				toggle_class(input2, "error", /*timesheetData*/ ctx[5][`wedWeek${/*index*/ ctx[36] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5][`wedWeek${/*index*/ ctx[36] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
     			}
 
     			if (dirty[0] & /*timesheetData, timeSheetUnitSelected*/ 2080) {
-    				toggle_class(input3, "error", /*timesheetData*/ ctx[5][`thuWeek${/*index*/ ctx[35] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5][`thuWeek${/*index*/ ctx[35] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
+    				toggle_class(input3, "error", /*timesheetData*/ ctx[5][`thuWeek${/*index*/ ctx[36] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5][`thuWeek${/*index*/ ctx[36] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
     			}
 
     			if (dirty[0] & /*timesheetData, timeSheetUnitSelected*/ 2080) {
-    				toggle_class(input4, "error", /*timesheetData*/ ctx[5][`friWeek${/*index*/ ctx[35] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hourly" || /*timesheetData*/ ctx[5][`friWeek${/*index*/ ctx[35] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "daily");
+    				toggle_class(input4, "error", /*timesheetData*/ ctx[5][`friWeek${/*index*/ ctx[36] + 2}`] > 16 && /*timeSheetUnitSelected*/ ctx[11] === "hours" || /*timesheetData*/ ctx[5][`friWeek${/*index*/ ctx[36] + 2}`] > 1 && /*timeSheetUnitSelected*/ ctx[11] === "days");
     			}
 
     			if (/*includeWeekends*/ ctx[10]) {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
     				} else {
-    					if_block0 = create_if_block_7(ctx);
+    					if_block0 = create_if_block_8(ctx);
     					if_block0.c();
     					if_block0.m(div13, t14);
     				}
@@ -5215,11 +5215,11 @@ var app = (function () {
     				if_block0 = null;
     			}
 
-    			if (/*weeks*/ ctx[6] == /*index*/ ctx[35] + 1) {
+    			if (/*weeks*/ ctx[6] == /*index*/ ctx[36] + 1) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
     				} else {
-    					if_block1 = create_if_block_5(ctx);
+    					if_block1 = create_if_block_6(ctx);
     					if_block1.c();
     					if_block1.m(div13, null);
     				}
@@ -5239,15 +5239,15 @@ var app = (function () {
     		block,
     		id: create_each_block$4.name,
     		type: "each",
-    		source: "(321:8) {#each Array(weeks) as week, index}",
+    		source: "(326:8) {#each Array(weeks) as week, index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (438:70) 
-    function create_if_block_4(ctx) {
+    // (443:69) 
+    function create_if_block_5(ctx) {
     	let error;
     	let current;
 
@@ -5282,17 +5282,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_4.name,
+    		id: create_if_block_5.name,
     		type: "if",
-    		source: "(438:70) ",
+    		source: "(443:69) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (435:8) {#if !dayInputValid && timeSheetUnitSelected === 'hourly'}
-    function create_if_block_3(ctx) {
+    // (440:8) {#if !dayInputValid && timeSheetUnitSelected === 'hours'}
+    function create_if_block_4(ctx) {
     	let error;
     	let current;
 
@@ -5327,16 +5327,61 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_3.name,
+    		id: create_if_block_4.name,
     		type: "if",
-    		source: "(435:8) {#if !dayInputValid && timeSheetUnitSelected === 'hourly'}",
+    		source: "(440:8) {#if !dayInputValid && timeSheetUnitSelected === 'hours'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (453:10) {#if !candEmailValid}
+    // (459:10) {#if !candEmailValid}
+    function create_if_block_3(ctx) {
+    	let error;
+    	let current;
+
+    	error = new ErrorMsg({
+    			props: {
+    				errMsgText: "Please enter a valid email address"
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(error.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(error, target, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(error.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(error.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(error, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_3.name,
+    		type: "if",
+    		source: "(459:10) {#if !candEmailValid}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (474:12) {#if !candEmailValid}
     function create_if_block_2(ctx) {
     	let error;
     	let current;
@@ -5374,14 +5419,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(453:10) {#if !candEmailValid}",
+    		source: "(474:12) {#if !candEmailValid}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (472:10) {#if !managerEmailValid}
+    // (493:12) {#if !managerEmailValid}
     function create_if_block_1(ctx) {
     	let error;
     	let current;
@@ -5419,14 +5464,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(472:10) {#if !managerEmailValid}",
+    		source: "(493:12) {#if !managerEmailValid}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (475:10) {#if candEmail && managerEmail === candEmail}
+    // (496:12) {#if candEmail && managerEmail === candEmail}
     function create_if_block$1(ctx) {
     	let error;
     	let current;
@@ -5464,14 +5509,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(475:10) {#if candEmail && managerEmail === candEmail}",
+    		source: "(496:12) {#if candEmail && managerEmail === candEmail}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (139:4) <Form bind:values={timesheetData}>
+    // (144:4) <Form bind:values={timesheetData}>
     function create_default_slot$1(ctx) {
     	let div3;
     	let div2;
@@ -5487,82 +5532,90 @@ var app = (function () {
     	let span;
     	let t7;
     	let p0;
-    	let t9;
-    	let div19;
+    	let t10;
+    	let div22;
     	let datepicker;
     	let updating_formattedSelected;
     	let updating_dateChosen;
     	let updating_selected;
-    	let t10;
+    	let t11;
     	let div5;
     	let div4;
-    	let t11;
+    	let t12;
     	let current_block_type_index;
     	let if_block1;
-    	let t12;
     	let t13;
     	let t14;
+    	let t15;
     	let current_block_type_index_1;
     	let if_block3;
-    	let t15;
-    	let div8;
+    	let t16;
+    	let div21;
     	let div7;
     	let div6;
-    	let t17;
+    	let t18;
     	let input1;
     	let input1_class_value;
-    	let t18;
     	let t19;
-    	let div11;
+    	let t20;
     	let div10;
     	let div9;
-    	let t21;
+    	let div8;
+    	let t22;
     	let input2;
     	let input2_class_value;
-    	let t22;
     	let t23;
     	let t24;
-    	let div14;
     	let div13;
     	let div12;
+    	let div11;
     	let t26;
     	let input3;
+    	let input3_class_value;
     	let t27;
-    	let div18;
+    	let t28;
+    	let t29;
     	let div16;
     	let div15;
-    	let t29;
-    	let p1;
-    	let t30;
-    	let br;
+    	let div14;
     	let t31;
-    	let button;
-    	let t33;
+    	let input4;
+    	let t32;
+    	let div20;
+    	let div18;
     	let div17;
     	let t34;
-    	let a0;
+    	let p1;
+    	let t35;
+    	let br;
     	let t36;
+    	let button;
+    	let t38;
+    	let div19;
+    	let t39;
+    	let a0;
+    	let t41;
     	let a1;
     	let current;
     	let mounted;
     	let dispose;
 
     	function datepicker_formattedSelected_binding(value) {
-    		/*datepicker_formattedSelected_binding*/ ctx[20].call(null, value);
+    		/*datepicker_formattedSelected_binding*/ ctx[21].call(null, value);
     	}
 
     	function datepicker_dateChosen_binding(value) {
-    		/*datepicker_dateChosen_binding*/ ctx[21].call(null, value);
+    		/*datepicker_dateChosen_binding*/ ctx[22].call(null, value);
     	}
 
     	function datepicker_selected_binding(value) {
-    		/*datepicker_selected_binding*/ ctx[22].call(null, value);
+    		/*datepicker_selected_binding*/ ctx[23].call(null, value);
     	}
 
     	let datepicker_props = {
     		format: /*dateFormat*/ ctx[14],
     		end: /*inThirtyDays*/ ctx[12],
-    		selectableCallback: /*mondaysOnlyCallback*/ ctx[15],
+    		selectableCallback: /*mondaysOnlyCallback*/ ctx[16],
     		buttonBackgroundColor: "#0064fe",
     		buttonTextColor: "white",
     		highlightColor: "#0064fe",
@@ -5588,8 +5641,8 @@ var app = (function () {
     	binding_callbacks.push(() => bind(datepicker, "formattedSelected", datepicker_formattedSelected_binding));
     	binding_callbacks.push(() => bind(datepicker, "dateChosen", datepicker_dateChosen_binding));
     	binding_callbacks.push(() => bind(datepicker, "selected", datepicker_selected_binding));
-    	let if_block0 = /*dateChosen*/ ctx[8] && create_if_block_11(ctx);
-    	const if_block_creators = [create_if_block_9, create_else_block];
+    	let if_block0 = /*dateChosen*/ ctx[8] && create_if_block_12(ctx);
+    	const if_block_creators = [create_if_block_10, create_else_block];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -5599,7 +5652,7 @@ var app = (function () {
 
     	current_block_type_index = select_block_type(ctx);
     	if_block1 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-    	let if_block2 = /*dateChosen*/ ctx[8] && /*weeks*/ ctx[6] == 0 && create_if_block_8(ctx);
+    	let if_block2 = /*dateChosen*/ ctx[8] && /*weeks*/ ctx[6] == 0 && create_if_block_9(ctx);
     	let each_value = Array(/*weeks*/ ctx[6]);
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -5608,12 +5661,12 @@ var app = (function () {
     		each_blocks[i] = create_each_block$4(get_each_context$4(ctx, each_value, i));
     	}
 
-    	const if_block_creators_1 = [create_if_block_3, create_if_block_4];
+    	const if_block_creators_1 = [create_if_block_4, create_if_block_5];
     	const if_blocks_1 = [];
 
     	function select_block_type_1(ctx, dirty) {
-    		if (!/*dayInputValid*/ ctx[0] && /*timeSheetUnitSelected*/ ctx[11] === "hourly") return 0;
-    		if (!/*dayInputValid*/ ctx[0] && /*timeSheetUnitSelected*/ ctx[11] === "daily") return 1;
+    		if (!/*dayInputValid*/ ctx[0] && /*timeSheetUnitSelected*/ ctx[11] === "hours") return 0;
+    		if (!/*dayInputValid*/ ctx[0] && /*timeSheetUnitSelected*/ ctx[11] === "days") return 1;
     		return -1;
     	}
 
@@ -5621,9 +5674,10 @@ var app = (function () {
     		if_block3 = if_blocks_1[current_block_type_index_1] = if_block_creators_1[current_block_type_index_1](ctx);
     	}
 
-    	let if_block4 = !/*candEmailValid*/ ctx[2] && create_if_block_2(ctx);
-    	let if_block5 = !/*managerEmailValid*/ ctx[4] && create_if_block_1(ctx);
-    	let if_block6 = /*candEmail*/ ctx[1] && /*managerEmail*/ ctx[3] === /*candEmail*/ ctx[1] && create_if_block$1(ctx);
+    	let if_block4 = !/*candEmailValid*/ ctx[2] && create_if_block_3(ctx);
+    	let if_block5 = !/*candEmailValid*/ ctx[2] && create_if_block_2(ctx);
+    	let if_block6 = !/*managerEmailValid*/ ctx[4] && create_if_block_1(ctx);
+    	let if_block7 = /*candEmail*/ ctx[1] && /*managerEmail*/ ctx[3] === /*candEmail*/ ctx[1] && create_if_block$1(ctx);
 
     	const block = {
     		c: function create() {
@@ -5646,180 +5700,206 @@ var app = (function () {
     			span.textContent = "Include weekends?";
     			t7 = space();
     			p0 = element("p");
-    			p0.textContent = "Please tell us the Monday you want your timesheet to start on";
-    			t9 = space();
-    			div19 = element("div");
-    			create_component(datepicker.$$.fragment);
+    			p0.textContent = `Please tell us the Monday you want your timesheet to start on ${/*jwt*/ ctx[15]}`;
     			t10 = space();
+    			div22 = element("div");
+    			create_component(datepicker.$$.fragment);
+    			t11 = space();
     			div5 = element("div");
     			div4 = element("div");
     			if (if_block0) if_block0.c();
-    			t11 = space();
-    			if_block1.c();
     			t12 = space();
-    			if (if_block2) if_block2.c();
+    			if_block1.c();
     			t13 = space();
+    			if (if_block2) if_block2.c();
+    			t14 = space();
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t14 = space();
-    			if (if_block3) if_block3.c();
     			t15 = space();
-    			div8 = element("div");
+    			if (if_block3) if_block3.c();
+    			t16 = space();
+    			div21 = element("div");
     			div7 = element("div");
     			div6 = element("div");
-    			div6.textContent = "Please enter your email address";
-    			t17 = space();
-    			input1 = element("input");
+    			div6.textContent = "Please enter your name";
     			t18 = space();
-    			if (if_block4) if_block4.c();
+    			input1 = element("input");
     			t19 = space();
-    			div11 = element("div");
+    			if (if_block4) if_block4.c();
+    			t20 = space();
     			div10 = element("div");
     			div9 = element("div");
-    			div9.textContent = "Please enter the email address for the person who approves your\n              timesheet";
-    			t21 = space();
-    			input2 = element("input");
+    			div8 = element("div");
+    			div8.textContent = "Please enter your email address";
     			t22 = space();
-    			if (if_block5) if_block5.c();
+    			input2 = element("input");
     			t23 = space();
-    			if (if_block6) if_block6.c();
+    			if (if_block5) if_block5.c();
     			t24 = space();
-    			div14 = element("div");
     			div13 = element("div");
     			div12 = element("div");
-    			div12.textContent = "Please give a brief description of what you worked on";
+    			div11 = element("div");
+    			div11.textContent = "Please enter the email address for the person who approves your\n                timesheet";
     			t26 = space();
     			input3 = element("input");
     			t27 = space();
-    			div18 = element("div");
+    			if (if_block6) if_block6.c();
+    			t28 = space();
+    			if (if_block7) if_block7.c();
+    			t29 = space();
     			div16 = element("div");
     			div15 = element("div");
-    			div15.textContent = "Confirm Submission.";
-    			t29 = space();
-    			p1 = element("p");
-    			t30 = text("We will not send you any marketing. You will be contacted\n              regarding this timesheet and your contact details will be deleted\n              in 3 months. If you are interested in a branded timesheet portal\n              for your agency please contact us.");
-    			br = element("br");
+    			div14 = element("div");
+    			div14.textContent = "Please give a brief description of what you worked on";
     			t31 = space();
+    			input4 = element("input");
+    			t32 = space();
+    			div20 = element("div");
+    			div18 = element("div");
+    			div17 = element("div");
+    			div17.textContent = "Confirm Submission.";
+    			t34 = space();
+    			p1 = element("p");
+    			t35 = text("We will not send you any marketing. You will be contacted\n                regarding this timesheet and your contact details will be\n                deleted in 3 months. If you are interested in a branded\n                timesheet portal for your agency please contact us.");
+    			br = element("br");
+    			t36 = space();
     			button = element("button");
     			button.textContent = "Complete Submission";
-    			t33 = space();
-    			div17 = element("div");
-    			t34 = text("By submitting, you are agreeing to our\n            ");
+    			t38 = space();
+    			div19 = element("div");
+    			t39 = text("By submitting, you are agreeing to our\n              ");
     			a0 = element("a");
     			a0.textContent = "Terms";
-    			t36 = text("\n            and\n            ");
+    			t41 = text("\n              and\n              ");
     			a1 = element("a");
     			a1.textContent = "Privacy Policy";
     			attr_dev(div0, "class", "form-section-title");
-    			add_location(div0, file$7, 141, 10, 4600);
+    			add_location(div0, file$7, 146, 10, 4885);
     			attr_dev(div1, "class", "paragraph");
-    			add_location(div1, file$7, 142, 10, 4671);
+    			add_location(div1, file$7, 147, 10, 4956);
     			option0.__value = "hours";
     			option0.value = option0.__value;
-    			add_location(option0, file$7, 151, 47, 5049);
+    			add_location(option0, file$7, 156, 47, 5334);
     			option1.__value = "days";
     			option1.value = option1.__value;
-    			add_location(option1, file$7, 154, 12, 5127);
+    			add_location(option1, file$7, 159, 12, 5412);
     			attr_dev(select, "id", "time-unit-select");
     			attr_dev(select, "name", "time-unit-select");
     			attr_dev(select, "data-name", "time-unit-select");
     			select.required = "";
     			attr_dev(select, "class", "field-input select w-select");
-    			if (/*timeSheetUnitSelected*/ ctx[11] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[18].call(select));
-    			add_location(select, file$7, 144, 16, 4759);
+    			if (/*timeSheetUnitSelected*/ ctx[11] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[19].call(select));
+    			add_location(select, file$7, 149, 16, 5044);
     			attr_dev(input0, "type", "checkbox");
     			attr_dev(input0, "id", "weekend-checkbox");
     			attr_dev(input0, "name", "weekend-checkbox");
     			attr_dev(input0, "data-name", "weekend-checkbox");
     			attr_dev(input0, "class", "w-checkbox-input svelte-eq46ml");
-    			add_location(input0, file$7, 155, 36, 5208);
+    			add_location(input0, file$7, 160, 36, 5493);
     			attr_dev(span, "for", "weekend-checkbox");
     			attr_dev(span, "class", "paragraph w-form-label");
-    			add_location(span, file$7, 161, 41, 5448);
+    			add_location(span, file$7, 166, 41, 5733);
     			attr_dev(label, "class", "w-checkbox");
-    			add_location(label, file$7, 155, 10, 5182);
+    			add_location(label, file$7, 160, 10, 5467);
     			attr_dev(div2, "class", "form-title-wrap");
-    			add_location(div2, file$7, 140, 8, 4560);
+    			add_location(div2, file$7, 145, 8, 4845);
     			attr_dev(p0, "class", "paragraph");
-    			add_location(p0, file$7, 166, 8, 5593);
+    			add_location(p0, file$7, 171, 8, 5878);
     			attr_dev(div3, "class", "form-content");
-    			add_location(div3, file$7, 139, 6, 4525);
+    			add_location(div3, file$7, 144, 6, 4810);
     			attr_dev(div4, "class", "week-info");
-    			add_location(div4, file$7, 188, 10, 6417);
+    			add_location(div4, file$7, 193, 10, 6708);
     			attr_dev(div5, "class", "form-content-wrap week-row");
-    			add_location(div5, file$7, 187, 8, 6366);
-    			add_location(div6, file$7, 442, 12, 17410);
+    			add_location(div5, file$7, 192, 8, 6657);
+    			add_location(div6, file$7, 447, 12, 17671);
     			attr_dev(div7, "class", "label-with-tooltip");
-    			add_location(div7, file$7, 441, 10, 17365);
-    			attr_dev(input1, "type", "email");
+    			add_location(div7, file$7, 446, 10, 17626);
+    			attr_dev(input1, "type", "text");
 
     			attr_dev(input1, "class", input1_class_value = "" + (null_to_empty(/*candEmailValid*/ ctx[2]
     			? "field-input w-input"
     			: "field-input w-input error") + " svelte-eq46ml"));
 
     			attr_dev(input1, "maxlength", "256");
-    			attr_dev(input1, "name", "emailinput");
+    			attr_dev(input1, "name", "candName");
     			attr_dev(input1, "data-name", "emailinput");
-    			attr_dev(input1, "placeholder", "John Smith");
+    			attr_dev(input1, "placeholder", "Name");
     			attr_dev(input1, "id", "emailinput");
-    			add_location(input1, file$7, 443, 16, 17469);
-    			attr_dev(div8, "class", "form-content-wrap vertical");
-    			add_location(div8, file$7, 440, 8, 17314);
-    			add_location(div9, file$7, 458, 12, 18023);
-    			attr_dev(div10, "class", "label-with-tooltip");
-    			add_location(div10, file$7, 457, 10, 17978);
+    			add_location(input1, file$7, 448, 16, 17721);
+    			add_location(div8, file$7, 463, 14, 18289);
+    			attr_dev(div9, "class", "label-with-tooltip");
+    			add_location(div9, file$7, 462, 12, 18242);
     			attr_dev(input2, "type", "email");
 
-    			attr_dev(input2, "class", input2_class_value = "" + (null_to_empty(/*managerEmailValid*/ ctx[4]
+    			attr_dev(input2, "class", input2_class_value = "" + (null_to_empty(/*candEmailValid*/ ctx[2]
     			? "field-input w-input"
     			: "field-input w-input error") + " svelte-eq46ml"));
 
     			attr_dev(input2, "maxlength", "256");
-    			attr_dev(input2, "name", "manageremailinput");
-    			attr_dev(input2, "data-name", "manageremailinput");
-    			attr_dev(input2, "placeholder", "John Smith");
-    			attr_dev(input2, "id", "manageremailinput");
-    			add_location(input2, file$7, 462, 16, 18166);
-    			attr_dev(div11, "class", "form-content-wrap vertical");
-    			add_location(div11, file$7, 456, 8, 17927);
-    			add_location(div12, file$7, 480, 12, 18893);
-    			attr_dev(div13, "class", "label-with-tooltip");
-    			add_location(div13, file$7, 479, 10, 18848);
-    			attr_dev(input3, "type", "text");
-    			attr_dev(input3, "class", "field-input longer w-input svelte-eq46ml");
+    			attr_dev(input2, "name", "emailinput");
+    			attr_dev(input2, "data-name", "emailinput");
+    			attr_dev(input2, "placeholder", "Your work email address");
+    			attr_dev(input2, "id", "emailinput");
+    			add_location(input2, file$7, 464, 18, 18350);
+    			attr_dev(div10, "class", "form-content-wrap vertical");
+    			add_location(div10, file$7, 461, 10, 18189);
+    			add_location(div11, file$7, 479, 14, 18947);
+    			attr_dev(div12, "class", "label-with-tooltip");
+    			add_location(div12, file$7, 478, 12, 18900);
+    			attr_dev(input3, "type", "email");
+
+    			attr_dev(input3, "class", input3_class_value = "" + (null_to_empty(/*managerEmailValid*/ ctx[4]
+    			? "field-input w-input"
+    			: "field-input w-input error") + " svelte-eq46ml"));
+
     			attr_dev(input3, "maxlength", "256");
-    			attr_dev(input3, "name", "projectDesc");
-    			attr_dev(input3, "data-name", "project-placeholder-text");
-    			attr_dev(input3, "placeholder", "eg. Wrote custom code for time approved input forms.");
-    			attr_dev(input3, "id", "project-placeholder-text");
-    			add_location(input3, file$7, 481, 16, 18974);
-    			attr_dev(div14, "class", "form-content-wrap vertical");
-    			add_location(div14, file$7, 478, 8, 18797);
-    			attr_dev(div15, "class", "form-section-title");
-    			add_location(div15, file$7, 492, 12, 19392);
-    			add_location(br, file$7, 497, 48, 19763);
+    			attr_dev(input3, "name", "manageremailinput");
+    			attr_dev(input3, "data-name", "manageremailinput");
+    			attr_dev(input3, "placeholder", "Approver business email address");
+    			attr_dev(input3, "id", "manageremailinput");
+    			add_location(input3, file$7, 483, 18, 19098);
+    			attr_dev(div13, "class", "form-content-wrap vertical");
+    			add_location(div13, file$7, 477, 10, 18847);
+    			add_location(div14, file$7, 501, 14, 19882);
+    			attr_dev(div15, "class", "label-with-tooltip");
+    			add_location(div15, file$7, 500, 12, 19835);
+    			attr_dev(input4, "type", "text");
+    			attr_dev(input4, "class", "field-input longer w-input svelte-eq46ml");
+    			attr_dev(input4, "maxlength", "256");
+    			attr_dev(input4, "name", "projectDesc");
+    			attr_dev(input4, "data-name", "project-placeholder-text");
+    			attr_dev(input4, "placeholder", "eg. Wrote custom code for time approved input forms.");
+    			attr_dev(input4, "id", "project-placeholder-text");
+    			add_location(input4, file$7, 502, 18, 19965);
+    			attr_dev(div16, "class", "form-content-wrap vertical");
+    			add_location(div16, file$7, 499, 10, 19782);
+    			attr_dev(div17, "class", "form-section-title");
+    			add_location(div17, file$7, 513, 14, 20405);
+    			add_location(br, file$7, 518, 67, 20786);
     			attr_dev(p1, "class", "paragraph");
-    			add_location(p1, file$7, 493, 12, 19462);
-    			attr_dev(div16, "class", "form-title-wrap");
-    			add_location(div16, file$7, 491, 10, 19350);
+    			add_location(p1, file$7, 514, 14, 20477);
+    			attr_dev(div18, "class", "form-title-wrap");
+    			add_location(div18, file$7, 512, 12, 20361);
     			attr_dev(button, "class", "submit-button w-button");
     			attr_dev(button, "type", "submit");
-    			add_location(button, file$7, 499, 16, 19803);
+    			add_location(button, file$7, 520, 18, 20830);
     			attr_dev(a0, "href", "");
     			attr_dev(a0, "class", "form07_link");
-    			add_location(a0, file$7, 505, 12, 20071);
+    			add_location(a0, file$7, 526, 14, 21110);
     			attr_dev(a1, "href", "");
     			attr_dev(a1, "class", "form07_link");
-    			add_location(a1, file$7, 507, 12, 20137);
-    			attr_dev(div17, "class", "legal-disclaimer");
-    			add_location(div17, file$7, 503, 10, 19977);
-    			attr_dev(div18, "class", "form-content final");
-    			add_location(div18, file$7, 490, 8, 19307);
-    			attr_dev(div19, "class", "form-content-wrap vertical");
-    			add_location(div19, file$7, 170, 6, 5719);
+    			add_location(a1, file$7, 528, 14, 21180);
+    			attr_dev(div19, "class", "legal-disclaimer");
+    			add_location(div19, file$7, 524, 12, 21012);
+    			attr_dev(div20, "class", "form-content final");
+    			add_location(div20, file$7, 511, 10, 20316);
+    			attr_dev(div21, "class", "form-content-wrap vertical");
+    			add_location(div21, file$7, 445, 8, 17575);
+    			attr_dev(div22, "class", "form-content-wrap vertical");
+    			add_location(div22, file$7, 175, 6, 6010);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -5838,81 +5918,89 @@ var app = (function () {
     			append_dev(label, span);
     			append_dev(div3, t7);
     			append_dev(div3, p0);
-    			insert_dev(target, t9, anchor);
-    			insert_dev(target, div19, anchor);
-    			mount_component(datepicker, div19, null);
-    			append_dev(div19, t10);
-    			append_dev(div19, div5);
+    			insert_dev(target, t10, anchor);
+    			insert_dev(target, div22, anchor);
+    			mount_component(datepicker, div22, null);
+    			append_dev(div22, t11);
+    			append_dev(div22, div5);
     			append_dev(div5, div4);
     			if (if_block0) if_block0.m(div4, null);
-    			append_dev(div5, t11);
-    			if_blocks[current_block_type_index].m(div5, null);
     			append_dev(div5, t12);
+    			if_blocks[current_block_type_index].m(div5, null);
+    			append_dev(div5, t13);
     			if (if_block2) if_block2.m(div5, null);
-    			append_dev(div19, t13);
+    			append_dev(div22, t14);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(div19, null);
+    				each_blocks[i].m(div22, null);
     			}
 
-    			append_dev(div19, t14);
+    			append_dev(div22, t15);
 
     			if (~current_block_type_index_1) {
-    				if_blocks_1[current_block_type_index_1].m(div19, null);
+    				if_blocks_1[current_block_type_index_1].m(div22, null);
     			}
 
-    			append_dev(div19, t15);
-    			append_dev(div19, div8);
-    			append_dev(div8, div7);
+    			append_dev(div22, t16);
+    			append_dev(div22, div21);
+    			append_dev(div21, div7);
     			append_dev(div7, div6);
-    			append_dev(div7, t17);
-    			append_dev(div8, input1);
-    			set_input_value(input1, /*candEmail*/ ctx[1]);
-    			append_dev(div8, t18);
-    			if (if_block4) if_block4.m(div8, null);
-    			append_dev(div19, t19);
-    			append_dev(div19, div11);
-    			append_dev(div11, div10);
+    			append_dev(div7, t18);
+    			append_dev(div21, input1);
+    			append_dev(div21, t19);
+    			if (if_block4) if_block4.m(div21, null);
+    			append_dev(div21, t20);
+    			append_dev(div21, div10);
     			append_dev(div10, div9);
-    			append_dev(div10, t21);
-    			append_dev(div11, input2);
-    			set_input_value(input2, /*managerEmail*/ ctx[3]);
-    			append_dev(div11, t22);
-    			if (if_block5) if_block5.m(div11, null);
-    			append_dev(div11, t23);
-    			if (if_block6) if_block6.m(div11, null);
-    			append_dev(div19, t24);
-    			append_dev(div19, div14);
-    			append_dev(div14, div13);
+    			append_dev(div9, div8);
+    			append_dev(div9, t22);
+    			append_dev(div10, input2);
+    			set_input_value(input2, /*candEmail*/ ctx[1]);
+    			append_dev(div10, t23);
+    			if (if_block5) if_block5.m(div10, null);
+    			append_dev(div21, t24);
+    			append_dev(div21, div13);
     			append_dev(div13, div12);
-    			append_dev(div13, t26);
-    			append_dev(div14, input3);
-    			append_dev(div19, t27);
-    			append_dev(div19, div18);
-    			append_dev(div18, div16);
+    			append_dev(div12, div11);
+    			append_dev(div12, t26);
+    			append_dev(div13, input3);
+    			set_input_value(input3, /*managerEmail*/ ctx[3]);
+    			append_dev(div13, t27);
+    			if (if_block6) if_block6.m(div13, null);
+    			append_dev(div13, t28);
+    			if (if_block7) if_block7.m(div13, null);
+    			append_dev(div21, t29);
+    			append_dev(div21, div16);
     			append_dev(div16, div15);
-    			append_dev(div16, t29);
-    			append_dev(div16, p1);
-    			append_dev(p1, t30);
-    			append_dev(p1, br);
-    			append_dev(div16, t31);
-    			append_dev(div18, button);
-    			append_dev(div18, t33);
+    			append_dev(div15, div14);
+    			append_dev(div15, t31);
+    			append_dev(div16, input4);
+    			append_dev(div21, t32);
+    			append_dev(div21, div20);
+    			append_dev(div20, div18);
     			append_dev(div18, div17);
-    			append_dev(div17, t34);
-    			append_dev(div17, a0);
-    			append_dev(div17, t36);
-    			append_dev(div17, a1);
+    			append_dev(div18, t34);
+    			append_dev(div18, p1);
+    			append_dev(p1, t35);
+    			append_dev(p1, br);
+    			append_dev(div18, t36);
+    			append_dev(div20, button);
+    			append_dev(div20, t38);
+    			append_dev(div20, div19);
+    			append_dev(div19, t39);
+    			append_dev(div19, a0);
+    			append_dev(div19, t41);
+    			append_dev(div19, a1);
     			current = true;
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(select, "click", /*click_handler*/ ctx[17], false, false, false),
-    					listen_dev(select, "change", /*select_change_handler*/ ctx[18]),
-    					listen_dev(input0, "change", /*input0_change_handler*/ ctx[19]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[26]),
+    					listen_dev(select, "click", /*click_handler*/ ctx[18], false, false, false),
+    					listen_dev(select, "change", /*select_change_handler*/ ctx[19]),
+    					listen_dev(input0, "change", /*input0_change_handler*/ ctx[20]),
     					listen_dev(input2, "input", /*input2_input_handler*/ ctx[27]),
-    					listen_dev(button, "click", prevent_default(/*click_handler_4*/ ctx[28]), false, true, false)
+    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[28]),
+    					listen_dev(button, "click", prevent_default(/*click_handler_4*/ ctx[29]), false, true, false)
     				];
 
     				mounted = true;
@@ -5954,7 +6042,7 @@ var app = (function () {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
     				} else {
-    					if_block0 = create_if_block_11(ctx);
+    					if_block0 = create_if_block_12(ctx);
     					if_block0.c();
     					if_block0.m(div4, null);
     				}
@@ -5984,14 +6072,14 @@ var app = (function () {
     				}
 
     				transition_in(if_block1, 1);
-    				if_block1.m(div5, t12);
+    				if_block1.m(div5, t13);
     			}
 
     			if (/*dateChosen*/ ctx[8] && /*weeks*/ ctx[6] == 0) {
     				if (if_block2) {
     					if_block2.p(ctx, dirty);
     				} else {
-    					if_block2 = create_if_block_8(ctx);
+    					if_block2 = create_if_block_9(ctx);
     					if_block2.c();
     					if_block2.m(div5, null);
     				}
@@ -6013,7 +6101,7 @@ var app = (function () {
     					} else {
     						each_blocks[i] = create_each_block$4(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(div19, t14);
+    						each_blocks[i].m(div22, t15);
     					}
     				}
 
@@ -6047,7 +6135,7 @@ var app = (function () {
     					}
 
     					transition_in(if_block3, 1);
-    					if_block3.m(div19, t15);
+    					if_block3.m(div22, t16);
     				} else {
     					if_block3 = null;
     				}
@@ -6059,20 +6147,16 @@ var app = (function () {
     				attr_dev(input1, "class", input1_class_value);
     			}
 
-    			if (dirty[0] & /*candEmail*/ 2 && input1.value !== /*candEmail*/ ctx[1]) {
-    				set_input_value(input1, /*candEmail*/ ctx[1]);
-    			}
-
     			if (!/*candEmailValid*/ ctx[2]) {
     				if (if_block4) {
     					if (dirty[0] & /*candEmailValid*/ 4) {
     						transition_in(if_block4, 1);
     					}
     				} else {
-    					if_block4 = create_if_block_2(ctx);
+    					if_block4 = create_if_block_3(ctx);
     					if_block4.c();
     					transition_in(if_block4, 1);
-    					if_block4.m(div8, null);
+    					if_block4.m(div21, t20);
     				}
     			} else if (if_block4) {
     				group_outros();
@@ -6084,26 +6168,26 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (!current || dirty[0] & /*managerEmailValid*/ 16 && input2_class_value !== (input2_class_value = "" + (null_to_empty(/*managerEmailValid*/ ctx[4]
+    			if (!current || dirty[0] & /*candEmailValid*/ 4 && input2_class_value !== (input2_class_value = "" + (null_to_empty(/*candEmailValid*/ ctx[2]
     			? "field-input w-input"
     			: "field-input w-input error") + " svelte-eq46ml"))) {
     				attr_dev(input2, "class", input2_class_value);
     			}
 
-    			if (dirty[0] & /*managerEmail*/ 8 && input2.value !== /*managerEmail*/ ctx[3]) {
-    				set_input_value(input2, /*managerEmail*/ ctx[3]);
+    			if (dirty[0] & /*candEmail*/ 2 && input2.value !== /*candEmail*/ ctx[1]) {
+    				set_input_value(input2, /*candEmail*/ ctx[1]);
     			}
 
-    			if (!/*managerEmailValid*/ ctx[4]) {
+    			if (!/*candEmailValid*/ ctx[2]) {
     				if (if_block5) {
-    					if (dirty[0] & /*managerEmailValid*/ 16) {
+    					if (dirty[0] & /*candEmailValid*/ 4) {
     						transition_in(if_block5, 1);
     					}
     				} else {
-    					if_block5 = create_if_block_1(ctx);
+    					if_block5 = create_if_block_2(ctx);
     					if_block5.c();
     					transition_in(if_block5, 1);
-    					if_block5.m(div11, t23);
+    					if_block5.m(div10, null);
     				}
     			} else if (if_block5) {
     				group_outros();
@@ -6115,22 +6199,53 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*candEmail*/ ctx[1] && /*managerEmail*/ ctx[3] === /*candEmail*/ ctx[1]) {
+    			if (!current || dirty[0] & /*managerEmailValid*/ 16 && input3_class_value !== (input3_class_value = "" + (null_to_empty(/*managerEmailValid*/ ctx[4]
+    			? "field-input w-input"
+    			: "field-input w-input error") + " svelte-eq46ml"))) {
+    				attr_dev(input3, "class", input3_class_value);
+    			}
+
+    			if (dirty[0] & /*managerEmail*/ 8 && input3.value !== /*managerEmail*/ ctx[3]) {
+    				set_input_value(input3, /*managerEmail*/ ctx[3]);
+    			}
+
+    			if (!/*managerEmailValid*/ ctx[4]) {
     				if (if_block6) {
-    					if (dirty[0] & /*candEmail, managerEmail*/ 10) {
+    					if (dirty[0] & /*managerEmailValid*/ 16) {
     						transition_in(if_block6, 1);
     					}
     				} else {
-    					if_block6 = create_if_block$1(ctx);
+    					if_block6 = create_if_block_1(ctx);
     					if_block6.c();
     					transition_in(if_block6, 1);
-    					if_block6.m(div11, null);
+    					if_block6.m(div13, t28);
     				}
     			} else if (if_block6) {
     				group_outros();
 
     				transition_out(if_block6, 1, 1, () => {
     					if_block6 = null;
+    				});
+
+    				check_outros();
+    			}
+
+    			if (/*candEmail*/ ctx[1] && /*managerEmail*/ ctx[3] === /*candEmail*/ ctx[1]) {
+    				if (if_block7) {
+    					if (dirty[0] & /*candEmail, managerEmail*/ 10) {
+    						transition_in(if_block7, 1);
+    					}
+    				} else {
+    					if_block7 = create_if_block$1(ctx);
+    					if_block7.c();
+    					transition_in(if_block7, 1);
+    					if_block7.m(div13, null);
+    				}
+    			} else if (if_block7) {
+    				group_outros();
+
+    				transition_out(if_block7, 1, 1, () => {
+    					if_block7 = null;
     				});
 
     				check_outros();
@@ -6144,6 +6259,7 @@ var app = (function () {
     			transition_in(if_block4);
     			transition_in(if_block5);
     			transition_in(if_block6);
+    			transition_in(if_block7);
     			current = true;
     		},
     		o: function outro(local) {
@@ -6153,12 +6269,13 @@ var app = (function () {
     			transition_out(if_block4);
     			transition_out(if_block5);
     			transition_out(if_block6);
+    			transition_out(if_block7);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div3);
-    			if (detaching) detach_dev(t9);
-    			if (detaching) detach_dev(div19);
+    			if (detaching) detach_dev(t10);
+    			if (detaching) detach_dev(div22);
     			destroy_component(datepicker);
     			if (if_block0) if_block0.d();
     			if_blocks[current_block_type_index].d();
@@ -6172,6 +6289,7 @@ var app = (function () {
     			if (if_block4) if_block4.d();
     			if (if_block5) if_block5.d();
     			if (if_block6) if_block6.d();
+    			if (if_block7) if_block7.d();
     			mounted = false;
     			run_all(dispose);
     		}
@@ -6181,7 +6299,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(139:4) <Form bind:values={timesheetData}>",
+    		source: "(144:4) <Form bind:values={timesheetData}>",
     		ctx
     	});
 
@@ -6202,7 +6320,7 @@ var app = (function () {
     	let current;
 
     	function form_values_binding(value) {
-    		/*form_values_binding*/ ctx[29].call(null, value);
+    		/*form_values_binding*/ ctx[30].call(null, value);
     	}
 
     	let form_props = {
@@ -6230,16 +6348,16 @@ var app = (function () {
     			div3 = element("div");
     			div2 = element("div");
     			div2.textContent = "Oops! Something went wrong while submitting the form";
-    			add_location(div0, file$7, 516, 6, 20410);
+    			add_location(div0, file$7, 538, 6, 21472);
     			attr_dev(div1, "class", "success-message w-form-done");
-    			add_location(div1, file$7, 515, 4, 20362);
-    			add_location(div2, file$7, 526, 6, 20848);
+    			add_location(div1, file$7, 537, 4, 21424);
+    			add_location(div2, file$7, 548, 6, 21910);
     			attr_dev(div3, "class", "error-message w-form-fail");
-    			add_location(div3, file$7, 525, 4, 20802);
+    			add_location(div3, file$7, 547, 4, 21864);
     			attr_dev(div4, "class", "form-wrapper w-form");
-    			add_location(div4, file$7, 137, 2, 4446);
+    			add_location(div4, file$7, 142, 2, 4731);
     			attr_dev(div5, "class", "form-full");
-    			add_location(div5, file$7, 136, 0, 4420);
+    			add_location(div5, file$7, 141, 0, 4705);
     		},
     		l: function claim(nodes) {
     			throw new Error_1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6259,7 +6377,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const form_changes = {};
 
-    			if (dirty[0] & /*candEmail, managerEmail, managerEmailValid, candEmailValid, dayInputValid, timeSheetUnitSelected, weeks, timesheetData, includeWeekends, weekDates, dateChosen, inThirtyDays, formattedSelected, selectedDate*/ 16383 | dirty[1] & /*$$scope*/ 32) {
+    			if (dirty[0] & /*candEmail, managerEmail, managerEmailValid, candEmailValid, dayInputValid, timeSheetUnitSelected, weeks, timesheetData, includeWeekends, weekDates, dateChosen, inThirtyDays, formattedSelected, selectedDate*/ 16383 | dirty[1] & /*$$scope*/ 64) {
     				form_changes.$$scope = { dirty, ctx };
     			}
 
@@ -6313,8 +6431,9 @@ var app = (function () {
     	let dateChosen = false;
     	let selectedDate;
     	let includeWeekends = false;
-    	let timeSheetUnitSelected = "hourly";
+    	let timeSheetUnitSelected = "hours";
     	const today = new Date();
+    	const jwt = window.location.search.slice(1).split("&")[0].split("=")[1];
 
     	const validateEmail = email => {
     		const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -6350,6 +6469,7 @@ var app = (function () {
     		timesheetDataBetter.managerEmail = timesheetData.manageremailinput;
     		timesheetDataBetter.candidateEmail = timesheetData.emailinput;
     		timesheetDataBetter.projectDesc = timesheetData.projectDesc;
+    		timesheetDataBetter.candName = timesheetData.candName;
 
     		// run through each week and add the day values (0 if NaN) and weekcommecing date
     		for (let i = 0; i < weeks + 1; i++) {
@@ -6366,8 +6486,9 @@ var app = (function () {
 
     			// check to see if any days have too many hours / days listed
     			Object.keys(timesheetDataBetter.weeks[i]).filter(key => key != "weekCommencing").map(key => {
-    				if (timeSheetUnitSelected === "hourly" && timesheetDataBetter.weeks[i][key] > 16 || timeSheetUnitSelected === "daily" && timesheetDataBetter.weeks[i][key] > 1) {
+    				if (timeSheetUnitSelected === "hours" && timesheetDataBetter.weeks[i][key] > 16 || timeSheetUnitSelected === "days" && timesheetDataBetter.weeks[i][key] > 1) {
     					$$invalidate(0, dayInputValid = false);
+    					console.log("day input valid should now be false");
     				}
     			});
     		}
@@ -6387,7 +6508,7 @@ var app = (function () {
     					"Content-Type": "application/json"
     				},
     				body: JSON.stringify({ timesheetDataBetter })
-    			});
+    			}).then(res => console.log(res.status)).catch(err => console.log(err));
     		})(); // const content = await rawResponse.json();
     		// console.log(content);
     	};
@@ -6429,12 +6550,12 @@ var app = (function () {
     	const click_handler_2 = () => $$invalidate(6, weeks--, weeks);
     	const click_handler_3 = () => $$invalidate(6, weeks++, weeks);
 
-    	function input1_input_handler() {
+    	function input2_input_handler() {
     		candEmail = this.value;
     		$$invalidate(1, candEmail);
     	}
 
-    	function input2_input_handler() {
+    	function input3_input_handler() {
     		managerEmail = this.value;
     		$$invalidate(3, managerEmail);
     	}
@@ -6466,6 +6587,7 @@ var app = (function () {
     		includeWeekends,
     		timeSheetUnitSelected,
     		today,
+    		jwt,
     		validateEmail,
     		mondaysOnlyCallback,
     		inThirtyDays,
@@ -6488,7 +6610,7 @@ var app = (function () {
     		if ("selectedDate" in $$props) $$invalidate(9, selectedDate = $$props.selectedDate);
     		if ("includeWeekends" in $$props) $$invalidate(10, includeWeekends = $$props.includeWeekends);
     		if ("timeSheetUnitSelected" in $$props) $$invalidate(11, timeSheetUnitSelected = $$props.timeSheetUnitSelected);
-    		if ("mondaysOnlyCallback" in $$props) $$invalidate(15, mondaysOnlyCallback = $$props.mondaysOnlyCallback);
+    		if ("mondaysOnlyCallback" in $$props) $$invalidate(16, mondaysOnlyCallback = $$props.mondaysOnlyCallback);
     		if ("inThirtyDays" in $$props) $$invalidate(12, inThirtyDays = $$props.inThirtyDays);
     		if ("weekDates" in $$props) $$invalidate(13, weekDates = $$props.weekDates);
     	};
@@ -6534,6 +6656,7 @@ var app = (function () {
     		inThirtyDays,
     		weekDates,
     		dateFormat,
+    		jwt,
     		mondaysOnlyCallback,
     		getFormData,
     		click_handler,
@@ -6545,8 +6668,8 @@ var app = (function () {
     		click_handler_1,
     		click_handler_2,
     		click_handler_3,
-    		input1_input_handler,
     		input2_input_handler,
+    		input3_input_handler,
     		click_handler_4,
     		form_values_binding
     	];

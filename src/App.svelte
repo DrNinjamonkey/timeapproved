@@ -17,8 +17,9 @@
   let dateChosen = false;
   let selectedDate;
   let includeWeekends = false;
-  let timeSheetUnitSelected = "hourly";
+  let timeSheetUnitSelected = "hours";
   const today = new Date();
+  const jwt = window.location.search.slice(1).split("&")[0].split("=")[1];
 
   const validateEmail = (email) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -70,6 +71,7 @@
     timesheetDataBetter.managerEmail = timesheetData.manageremailinput;
     timesheetDataBetter.candidateEmail = timesheetData.emailinput;
     timesheetDataBetter.projectDesc = timesheetData.projectDesc;
+    timesheetDataBetter.candName = timesheetData.candName;
     // run through each week and add the day values (0 if NaN) and weekcommecing date
     for (let i = 0; i < weeks + 1; i++) {
       timesheetDataBetter.weeks.push({
@@ -87,12 +89,13 @@
         .filter((key) => key != "weekCommencing")
         .map((key) => {
           if (
-            (timeSheetUnitSelected === "hourly" &&
+            (timeSheetUnitSelected === "hours" &&
               timesheetDataBetter.weeks[i][key] > 16) ||
-            (timeSheetUnitSelected === "daily" &&
+            (timeSheetUnitSelected === "days" &&
               timesheetDataBetter.weeks[i][key] > 1)
           ) {
             dayInputValid = false;
+            console.log("day input valid should now be false");
           }
         });
     }
@@ -113,7 +116,9 @@
           },
           body: JSON.stringify({ timesheetDataBetter }),
         }
-      );
+      )
+        .then((res) => console.log(res.status))
+        .catch((err) => console.log(err));
       // const content = await rawResponse.json();
       // console.log(content);
     })();
@@ -165,7 +170,7 @@
         </div>
 
         <p class="paragraph">
-          Please tell us the Monday you want your timesheet to start on
+          Please tell us the Monday you want your timesheet to start on {jwt}
         </p>
       </div>
       <div class="form-content-wrap vertical">
@@ -201,7 +206,7 @@
                 type="number"
                 min="0"
                 class="field-input time-unit w-input"
-                class:error={(timesheetData.monWeek1 > 16 && timeSheetUnitSelected === 'hourly') || (timesheetData.monWeek1 > 1 && timeSheetUnitSelected === 'daily')}
+                class:error={(timesheetData.monWeek1 > 16 && timeSheetUnitSelected === 'hours') || (timesheetData.monWeek1 > 1 && timeSheetUnitSelected === 'days')}
                 maxlength="256"
                 name="monWeek1"
                 data-name="monWeek1"
@@ -216,7 +221,7 @@
                 min="0"
                 max="16"
                 class="field-input time-unit w-input"
-                class:error={(timesheetData.tueWeek1 > 16 && timeSheetUnitSelected === 'hourly') || (timesheetData.tueWeek1 > 1 && timeSheetUnitSelected === 'daily')}
+                class:error={(timesheetData.tueWeek1 > 16 && timeSheetUnitSelected === 'hours') || (timesheetData.tueWeek1 > 1 && timeSheetUnitSelected === 'days')}
                 maxlength="256"
                 name="tueWeek1"
                 data-name="tueWeek1"
@@ -231,7 +236,7 @@
                 min="0"
                 max="16"
                 class="field-input time-unit w-input"
-                class:error={(timesheetData.wedWeek1 > 16 && timeSheetUnitSelected === 'hourly') || (timesheetData.wedWeek1 > 1 && timeSheetUnitSelected === 'daily')}
+                class:error={(timesheetData.wedWeek1 > 16 && timeSheetUnitSelected === 'hours') || (timesheetData.wedWeek1 > 1 && timeSheetUnitSelected === 'days')}
                 maxlength="256"
                 name="wedWeek1"
                 data-name="wedWeek1"
@@ -246,7 +251,7 @@
                 min="0"
                 max="16"
                 class="field-input time-unit w-input"
-                class:error={(timesheetData.thuWeek1 > 16 && timeSheetUnitSelected === 'hourly') || (timesheetData.thuWeek1 > 1 && timeSheetUnitSelected === 'daily')}
+                class:error={(timesheetData.thuWeek1 > 16 && timeSheetUnitSelected === 'hours') || (timesheetData.thuWeek1 > 1 && timeSheetUnitSelected === 'days')}
                 maxlength="256"
                 name="thuWeek1"
                 data-name="thuWeek1"
@@ -261,7 +266,7 @@
                 min="0"
                 max="16"
                 class="field-input time-unit w-input"
-                class:error={(timesheetData.friWeek1 > 16 && timeSheetUnitSelected === 'hourly') || (timesheetData.friWeek1 > 1 && timeSheetUnitSelected === 'daily')}
+                class:error={(timesheetData.friWeek1 > 16 && timeSheetUnitSelected === 'hours') || (timesheetData.friWeek1 > 1 && timeSheetUnitSelected === 'days')}
                 maxlength="256"
                 name="friWeek1"
                 data-name="friWeek1"
@@ -278,7 +283,7 @@
                     min="0"
                     max="16"
                     class="field-input time-unit w-input"
-                    class:error={(timesheetData.satWeek1 > 16 && timeSheetUnitSelected === 'hourly') || (timesheetData.satWeek1 > 1 && timeSheetUnitSelected === 'daily')}
+                    class:error={(timesheetData.satWeek1 > 16 && timeSheetUnitSelected === 'hours') || (timesheetData.satWeek1 > 1 && timeSheetUnitSelected === 'days')}
                     maxlength="256"
                     name="satWeek1"
                     data-name="satWeek1"
@@ -293,7 +298,7 @@
                     min="0"
                     max="16"
                     class="field-input time-unit w-input"
-                    class:error={(timesheetData.sunWeek1 > 16 && timeSheetUnitSelected === 'hourly') || (timesheetData.sunWeek1 > 1 && timeSheetUnitSelected === 'daily')}
+                    class:error={(timesheetData.sunWeek1 > 16 && timeSheetUnitSelected === 'hours') || (timesheetData.sunWeek1 > 1 && timeSheetUnitSelected === 'days')}
                     maxlength="256"
                     name="sunWeek1"
                     data-name="sunWeek1"
@@ -330,7 +335,7 @@
               <div class="day-label">MON</div><input
                 type="number"
                 class={'field-input time-unit w-input'}
-                class:error={(timesheetData[`monWeek${index + 2}`] > 16 && timeSheetUnitSelected === 'hourly') || (timesheetData[`monWeek${index + 2}`] > 1 && timeSheetUnitSelected === 'daily')}
+                class:error={(timesheetData[`monWeek${index + 2}`] > 16 && timeSheetUnitSelected === 'hours') || (timesheetData[`monWeek${index + 2}`] > 1 && timeSheetUnitSelected === 'days')}
                 maxlength="256"
                 name="monWeek{index + 2}"
                 data-name="monWeek{index + 2}"
@@ -342,7 +347,7 @@
               <div class="day-label">TUE</div><input
                 type="text"
                 class="field-input time-unit w-input"
-                class:error={(timesheetData[`tueWeek${index + 2}`] > 16 && timeSheetUnitSelected === 'hourly') || (timesheetData[`tueWeek${index + 2}`] > 1 && timeSheetUnitSelected === 'daily')}
+                class:error={(timesheetData[`tueWeek${index + 2}`] > 16 && timeSheetUnitSelected === 'hours') || (timesheetData[`tueWeek${index + 2}`] > 1 && timeSheetUnitSelected === 'days')}
                 maxlength="256"
                 name="tueWeek{index + 2}"
                 data-name="tueWeek{index + 2}"
@@ -354,7 +359,7 @@
               <div class="day-label">WED</div><input
                 type="text"
                 class="field-input time-unit w-input"
-                class:error={(timesheetData[`wedWeek${index + 2}`] > 16 && timeSheetUnitSelected === 'hourly') || (timesheetData[`wedWeek${index + 2}`] > 1 && timeSheetUnitSelected === 'daily')}
+                class:error={(timesheetData[`wedWeek${index + 2}`] > 16 && timeSheetUnitSelected === 'hours') || (timesheetData[`wedWeek${index + 2}`] > 1 && timeSheetUnitSelected === 'days')}
                 maxlength="256"
                 name="wedWeek{index + 2}"
                 data-name="wedWeek{index + 2}"
@@ -366,7 +371,7 @@
               <div class="day-label">THU</div><input
                 type="text"
                 class="field-input time-unit w-input"
-                class:error={(timesheetData[`thuWeek${index + 2}`] > 16 && timeSheetUnitSelected === 'hourly') || (timesheetData[`thuWeek${index + 2}`] > 1 && timeSheetUnitSelected === 'daily')}
+                class:error={(timesheetData[`thuWeek${index + 2}`] > 16 && timeSheetUnitSelected === 'hours') || (timesheetData[`thuWeek${index + 2}`] > 1 && timeSheetUnitSelected === 'days')}
                 maxlength="256"
                 name="thuWeek{index + 2}"
                 data-name="thuWeek{index + 2}"
@@ -378,7 +383,7 @@
               <div class="day-label">FRI</div><input
                 type="text"
                 class="field-input time-unit w-input"
-                class:error={(timesheetData[`friWeek${index + 2}`] > 16 && timeSheetUnitSelected === 'hourly') || (timesheetData[`friWeek${index + 2}`] > 1 && timeSheetUnitSelected === 'daily')}
+                class:error={(timesheetData[`friWeek${index + 2}`] > 16 && timeSheetUnitSelected === 'hours') || (timesheetData[`friWeek${index + 2}`] > 1 && timeSheetUnitSelected === 'days')}
                 maxlength="256"
                 name="friWeek{index + 2}"
                 data-name="friWeek{index + 2}"
@@ -392,7 +397,7 @@
                   <div class="day-label">SAT</div><input
                     type="text"
                     class="field-input time-unit w-input"
-                    class:error={(timesheetData[`satWeek${index + 2}`] > 16 && timeSheetUnitSelected === 'hourly') || (timesheetData[`satWeek${index + 2}`] > 1 && timeSheetUnitSelected === 'daily')}
+                    class:error={(timesheetData[`satWeek${index + 2}`] > 16 && timeSheetUnitSelected === 'hours') || (timesheetData[`satWeek${index + 2}`] > 1 && timeSheetUnitSelected === 'days')}
                     maxlength="256"
                     name="satWeek{index + 2}"
                     data-name="satWeek{index + 2}"
@@ -404,7 +409,7 @@
                   <div class="day-label">SUN</div><input
                     type="text"
                     class="field-input time-unit w-input"
-                    class:error={(timesheetData[`sunWeek${index + 2}`] > 16 && timeSheetUnitSelected === 'hourly') || (timesheetData[`sunWeek${index + 2}`] > 1 && timeSheetUnitSelected === 'daily')}
+                    class:error={(timesheetData[`sunWeek${index + 2}`] > 16 && timeSheetUnitSelected === 'hours') || (timesheetData[`sunWeek${index + 2}`] > 1 && timeSheetUnitSelected === 'days')}
                     maxlength="256"
                     name="sunWeek{index + 2}"
                     data-name="sunWeek{index + 2}"
@@ -432,80 +437,97 @@
             {/if}
           </div>
         {/each}
-        {#if !dayInputValid && timeSheetUnitSelected === 'hourly'}
+        {#if !dayInputValid && timeSheetUnitSelected === 'hours'}
           <Error
             errMsgText="You can only record between 0 and 16 hours per day!" />
-        {:else if !dayInputValid && timeSheetUnitSelected === 'daily'}
+        {:else if !dayInputValid && timeSheetUnitSelected === 'days'}
           <Error errMsgText="You can only record up to 1 day per day!" />
         {/if}
         <div class="form-content-wrap vertical">
           <div class="label-with-tooltip">
-            <div>Please enter your email address</div>
+            <div>Please enter your name</div>
           </div><input
-            type="email"
-            bind:value={candEmail}
+            type="text"
             class={candEmailValid ? 'field-input w-input' : 'field-input w-input error'}
             maxlength="256"
-            name="emailinput"
+            name="candName"
             data-name="emailinput"
-            placeholder="John Smith"
+            placeholder="Name"
             id="emailinput" />
+
+          <!-- TODO update this to error if no name filled in -->
           {#if !candEmailValid}
             <Error errMsgText="Please enter a valid email address" />
           {/if}
-        </div>
-        <div class="form-content-wrap vertical">
-          <div class="label-with-tooltip">
-            <div>
-              Please enter the email address for the person who approves your
-              timesheet
+          <div class="form-content-wrap vertical">
+            <div class="label-with-tooltip">
+              <div>Please enter your email address</div>
+            </div><input
+              type="email"
+              bind:value={candEmail}
+              class={candEmailValid ? 'field-input w-input' : 'field-input w-input error'}
+              maxlength="256"
+              name="emailinput"
+              data-name="emailinput"
+              placeholder="Your work email address"
+              id="emailinput" />
+            {#if !candEmailValid}
+              <Error errMsgText="Please enter a valid email address" />
+            {/if}
+          </div>
+          <div class="form-content-wrap vertical">
+            <div class="label-with-tooltip">
+              <div>
+                Please enter the email address for the person who approves your
+                timesheet
+              </div>
+            </div><input
+              type="email"
+              bind:value={managerEmail}
+              class={managerEmailValid ? 'field-input w-input' : 'field-input w-input error'}
+              maxlength="256"
+              name="manageremailinput"
+              data-name="manageremailinput"
+              placeholder="Approver business email address"
+              id="manageremailinput" />
+            {#if !managerEmailValid}
+              <Error errMsgText="Please enter a valid email address" />
+            {/if}
+            {#if candEmail && managerEmail === candEmail}
+              <Error errMsgText="Email addresses cannot be the same." />
+            {/if}
+          </div>
+          <div class="form-content-wrap vertical">
+            <div class="label-with-tooltip">
+              <div>Please give a brief description of what you worked on</div>
+            </div><input
+              type="text"
+              class="field-input longer w-input"
+              maxlength="256"
+              name="projectDesc"
+              data-name="project-placeholder-text"
+              placeholder="eg. Wrote custom code for time approved input forms."
+              id="project-placeholder-text" />
+          </div>
+          <div class="form-content final">
+            <div class="form-title-wrap">
+              <div class="form-section-title">Confirm Submission.</div>
+              <p class="paragraph">
+                We will not send you any marketing. You will be contacted
+                regarding this timesheet and your contact details will be
+                deleted in 3 months. If you are interested in a branded
+                timesheet portal for your agency please contact us.<br />
+              </p>
+            </div><button
+              on:click|preventDefault={() => getFormData()}
+              class="submit-button w-button"
+              type="submit">Complete Submission</button>
+            <div class="legal-disclaimer">
+              By submitting, you are agreeing to our
+              <a href class="form07_link">Terms</a>
+              and
+              <a href class="form07_link">Privacy Policy</a>
             </div>
-          </div><input
-            type="email"
-            bind:value={managerEmail}
-            class={managerEmailValid ? 'field-input w-input' : 'field-input w-input error'}
-            maxlength="256"
-            name="manageremailinput"
-            data-name="manageremailinput"
-            placeholder="John Smith"
-            id="manageremailinput" />
-          {#if !managerEmailValid}
-            <Error errMsgText="Please enter a valid email address" />
-          {/if}
-          {#if candEmail && managerEmail === candEmail}
-            <Error errMsgText="Email addresses cannot be the same." />
-          {/if}
-        </div>
-        <div class="form-content-wrap vertical">
-          <div class="label-with-tooltip">
-            <div>Please give a brief description of what you worked on</div>
-          </div><input
-            type="text"
-            class="field-input longer w-input"
-            maxlength="256"
-            name="projectDesc"
-            data-name="project-placeholder-text"
-            placeholder="eg. Wrote custom code for time approved input forms."
-            id="project-placeholder-text" />
-        </div>
-        <div class="form-content final">
-          <div class="form-title-wrap">
-            <div class="form-section-title">Confirm Submission.</div>
-            <p class="paragraph">
-              We will not send you any marketing. You will be contacted
-              regarding this timesheet and your contact details will be deleted
-              in 3 months. If you are interested in a branded timesheet portal
-              for your agency please contact us.<br />
-            </p>
-          </div><button
-            on:click|preventDefault={() => getFormData()}
-            class="submit-button w-button"
-            type="submit">Complete Submission</button>
-          <div class="legal-disclaimer">
-            By submitting, you are agreeing to our
-            <a href class="form07_link">Terms</a>
-            and
-            <a href class="form07_link">Privacy Policy</a>
           </div>
         </div>
       </div>

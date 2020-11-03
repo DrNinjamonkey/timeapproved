@@ -7,7 +7,7 @@
     "dev": "run-p start:dev autobuild watch:tailwind",
     "build": "npm run build:tailwind && rollup -c",
     "start": "sirv public --single",
-    "start:dev": "sirv public --single --dev",
+    "start:dev": "sirv public --single --dev --port 5555",
     "autobuild": "rollup -c -w"
   },
   "devDependencies": {
