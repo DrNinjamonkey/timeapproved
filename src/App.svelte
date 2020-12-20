@@ -9,9 +9,10 @@
   let outsetaToken = "";
 
   if ((window as any).Outseta) {
+    console.log("first");
     outsetaToken = (window as any).Outseta.getAccessToken();
-  } else
-    outsetaToken = window.location.search.slice(1).split("&")[0].split("=")[1];
+  } else console.log("second");
+  outsetaToken = window.location.search.slice(1).split("&")[0].split("=")[1];
 
   let isLoading = true;
   let isContractor = false;
@@ -37,12 +38,10 @@
   });
 </script>
 
-
-    <LoadingScreen {isLoading} />
-    {#if isContractor}
-      <ContractorDash {contractorData} />
-    {/if}
-    {#if isManager}
-      <ManagerDash {managerData} />
-    {/if}
-
+<LoadingScreen {isLoading} />
+{#if isContractor}
+  <ContractorDash {contractorData} />
+{/if}
+{#if isManager}
+  <ManagerDash {managerData} />
+{/if}
