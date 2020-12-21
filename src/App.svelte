@@ -21,7 +21,7 @@
   let contractorData;
   let managerData;
 
-  (window as any).Outseta.on("accessToken.set", async () => {
+   onMount((window as any).Outseta.on("accessToken.set", async () => {
     console.log(outsetaToken);
     dashData = await getTimesheets(outsetaToken);
     contractorData = dashData.frontEndUserTimesheets;
@@ -35,7 +35,7 @@
     console.log(managerData);
     console.log(contractorData);
     isLoading = false;
-  });
+  }));
 </script>
 
 <LoadingScreen {isLoading} />
