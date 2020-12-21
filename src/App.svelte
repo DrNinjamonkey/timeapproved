@@ -21,7 +21,7 @@
   let contractorData;
   let managerData;
 
-  onMount(async () => {
+    const setUp = async () => {
     console.log(outsetaToken);
     dashData = await getTimesheets(outsetaToken);
     contractorData = dashData.frontEndUserTimesheets;
@@ -35,7 +35,26 @@
     console.log(managerData);
     console.log(contractorData);
     isLoading = false;
-  });
+ }
+
+ (window as any).Outseta.on('accessToken.set', setUp)
+ 
+
+  // onMount(async () => {
+  //   console.log(outsetaToken);
+  //   dashData = await getTimesheets(outsetaToken);
+  //   contractorData = dashData.frontEndUserTimesheets;
+  //   managerData = dashData.frontEndUserContracts;
+  //   if (contractorData.length > 0) {
+  //     isContractor = true;
+  //   }
+  //   if (managerData.length > 0) {
+  //     isManager = true;
+  //   }
+  //   console.log(managerData);
+  //   console.log(contractorData);
+  //   isLoading = false;
+  // });
 </script>
 
 <LoadingScreen {isLoading} />
