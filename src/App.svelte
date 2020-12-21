@@ -21,9 +21,6 @@
   let contractorData;
   let managerData;
 
-  let loader = document.getElementById("loader");
-  
-
   onMount(async () => {
     console.log(outsetaToken);
     dashData = await getTimesheets(outsetaToken);
@@ -37,10 +34,11 @@
     }
     console.log(managerData);
     console.log(contractorData);
-    loader.style.display = 'none';
+    isLoading = false;
   });
 </script>
 
+<LoadingScreen {isLoading} />
 {#if isContractor}
   <ContractorDash {contractorData} />
 {/if}
