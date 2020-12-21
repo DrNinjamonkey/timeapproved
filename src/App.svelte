@@ -21,7 +21,7 @@
   let contractorData;
   let managerData;
 
-    const setUp = async () => {
+  const setUp = async () => {
     console.log(outsetaToken);
     dashData = await getTimesheets(outsetaToken);
     contractorData = dashData.frontEndUserTimesheets;
@@ -35,10 +35,11 @@
     console.log(managerData);
     console.log(contractorData);
     isLoading = false;
- }
+  };
 
- (window as any).Outseta.on('accessToken.set', setUp)
- 
+  (window as any).Outseta.on("accessToken.set", () => {
+    setUp();
+  });
 
   // onMount(async () => {
   //   console.log(outsetaToken);
