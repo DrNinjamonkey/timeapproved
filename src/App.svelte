@@ -1,7 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { getTimesheets } from "./apis";
-  import LoadingScreen from "./Components/LoadingScreen.svelte";
 
   import ContractorDash from "./ContractorDash.svelte";
   import ManagerDash from "./ManagerDash.svelte";
@@ -14,12 +13,12 @@
   } else console.log("second");
   outsetaToken = window.location.search.slice(1).split("&")[0].split("=")[1];
 
-  let isLoading = true;
   let isContractor = false;
   let isManager = false;
   let dashData;
   let contractorData;
   let managerData;
+  let loader = document.getElementById("loader");
 
   onMount(async () => {
     console.log(outsetaToken);
@@ -34,11 +33,10 @@
     }
     console.log(managerData);
     console.log(contractorData);
-    isLoading = false;
+    loader.style.display = "none";
   });
 </script>
 
-<LoadingScreen {isLoading} />
 {#if isContractor}
   <ContractorDash {contractorData} />
 {/if}
