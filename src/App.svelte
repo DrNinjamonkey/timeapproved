@@ -18,7 +18,7 @@
   let dashData;
   let contractorData;
   let managerData;
-  let loader = document.getElementById("loader");
+  let loaderDisplay = document.getElementById("loader").style.display;
 
   onMount(async () => {
     console.log(outsetaToken);
@@ -33,7 +33,7 @@
     }
     console.log(managerData);
     console.log(contractorData);
-    loader.style.display = "none";
+    loaderDisplay = "none";
   });
 </script>
 
