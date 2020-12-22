@@ -1,5 +1,4 @@
 <script>
-import LoadingScreen from "./Components/LoadingScreen.svelte";
 export let managerData;
 
 </script>
